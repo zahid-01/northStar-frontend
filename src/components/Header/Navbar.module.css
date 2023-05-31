@@ -1,0 +1,31 @@
+.header {
+  /* display: flex; */
+  font-size: 21px;
+  margin-top: 30px;
+}
+.headerCont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+}
+.headerBtn {
+  display: flex;
+  gap: 18px;
+  justify-content: flex-start;
+}
+.btn {
+  border: none;
+  padding: 8px;
+  color: white;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+.btn:hover {
+  cursor: pointer;
+  background: #5c7cfa;
+  color: #fff;
+}
+.btn:active {
+  color: red;
+}

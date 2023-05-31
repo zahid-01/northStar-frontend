@@ -1,0 +1,32 @@
+.filterCont {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.filterCont h2 {
+  font-size: 28px;
+}
+.filterBox {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+.filterBox p {
+  font-size: 18px;
+  border-bottom: 1px solid red;
+}
+.dropdown,
+.btn {
+  border: 1px solid #fff;
+  background: #fff;
+  color: #000;
+  font-size: inherit;
+  border-radius: 8px;
+  padding: 7px 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn:hover {
+  color: #fff;
+  background: #000;
+}

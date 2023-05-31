@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair:wght@300;400;500;700&display=swap");
+body {
+  background: rgb(2, 0, 36);
+  text-align: center;
+  align: center;
+  color: #fff;
+}
+.container {
+  border-radius: 8px;
+  border: 1px solid #fff;
+  padding: 18px;
+}
+.mainDiv1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 21px;
+}
+h1 {
+  margin-bottom: 51px;
+  font-size: 40px;
+}
+h3 {
+  text-align: center;
+  margin-bottom: 41px;
+  font-size: 31px;
+  font-weight: 400;
+}
+
+.btn {
+  border: 1px solid #afafaf;
+  background: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn:hover {
+  background: #7950f2;
+}
+.signup {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  height: 100%;
+}
+
+form input {
+  padding: 11px;
+  border-radius: 8px;
+  outline: none;
+  margin-bottom: 24px;
+}
+form label {
+  font-size: 18px;
+  padding: 8px;
+}
