@@ -17,15 +17,22 @@
 .btn {
   border: none;
   padding: 8px;
-  color: white;
   border-radius: 8px;
   transition: all 0.3s;
 }
 .btn:hover {
   cursor: pointer;
-  background: #5c7cfa;
+  background: #a70f0f;
   color: #fff;
 }
 .btn:active {
   color: red;
+}
+
+.user {
+  color: white;
+}
+
+img {
+  height: 50px;
 }

@@ -5,11 +5,12 @@ import { NavLink } from "react-router-dom";
 import { loginSliceActions } from "../../Store/loginSlice";
 
 import classes from "./Navbar.module.css";
+import logo from "../../Assets/Imgs/images.png";
 
 const Navbar = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { isLoggedIn } = useSelector((state) => state.login);
+  const { isLoggedIn, userInfo } = useSelector((state) => state.login);
 
   const logoutHandler = () => {
     dispatch(loginSliceActions.setLogin(false));
@@ -19,7 +20,7 @@ const Navbar = () => {
     <div className={classes.header}>
       <div className={classes.headerCont}>
         <img
-          src=""
+          src={logo}
           alt="Logo"
           onClick={() => {
             navigate("/");
@@ -38,9 +39,12 @@ const Navbar = () => {
             </>
           )}
           {isLoggedIn && (
-            <button className={classes.btn} onClick={logoutHandler}>
-              Logout
-            </button>
+            <>
+              <NavLink className={classes.user}>{userInfo.name}</NavLink>
+              <button className={classes.btn} onClick={logoutHandler}>
+                Logout
+              </button>
+            </>
           )}
         </div>
       </div>
