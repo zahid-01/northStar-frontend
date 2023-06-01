@@ -34,8 +34,6 @@ const Login = () => {
       },
     });
 
-    console.log(res.data.userData);
-
     if (res.statusText === "OK") {
       dispatch(loginSliceActions.setLogin(true));
       dispatch(loginSliceActions.setUserInfo(res.data.userData));

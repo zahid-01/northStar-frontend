@@ -14,6 +14,7 @@ const Navbar = () => {
 
   const logoutHandler = () => {
     dispatch(loginSliceActions.setLogin(false));
+    dispatch(loginSliceActions.setUserInfo(null));
   };
 
   return (
