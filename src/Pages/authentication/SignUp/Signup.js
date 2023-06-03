@@ -19,23 +19,28 @@ const Signup = () => {
   const [address, setAddress] = useState("");
 
   const nameChangeHandler = (e) => {
-    setName(e.target.value);
+    const nameInput = e.target.value;
+    setName(nameInput);
   };
 
   const emailChangeHandler = (e) => {
-    setEmail(e.target.value);
+    const emailInput = e.target.value;
+    setEmail(emailInput);
   };
 
   const passwordChangeHandler = (e) => {
-    setPassword(e.target.value);
+    const passwordInput = e.target.value;
+    setPassword(passwordInput);
   };
 
   const phoneChangeHandler = (e) => {
-    setPhone(e.target.value);
+    const phoneInput = e.target.value;
+    setPhone(phoneInput);
   };
 
   const addressChangeHandler = (e) => {
-    setAddress(e.target.value);
+    const addressInput = e.target.value;
+    setAddress(addressInput);
   };
 
   const submitHandler = async (e) => {

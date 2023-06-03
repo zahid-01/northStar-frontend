@@ -14,6 +14,8 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const [loginError, setLoginError] = useState(false);
+
   const emailChangeHandler = (e) => {
     setEmail(e.target.value);
   };
@@ -25,20 +27,28 @@ const Login = () => {
   const loginHandler = async (e) => {
     e.preventDefault();
 
-    const res = await axios({
+    await axios({
       method: "POST",
       url: "http://localhost:5000/user/login",
       data: {
         email,
         password,
       },
-    });
-
-    if (res.statusText === "OK") {
-      dispatch(loginSliceActions.setLogin(true));
-      dispatch(loginSliceActions.setUserInfo(res.data.userData));
-      navigate("/");
-    }
+    })
+      .then((res) => {
+        if (res.statusText === "OK") {
+          dispatch(loginSliceActions.setLogin(true));
+          dispatch(loginSliceActions.setUserInfo(res.data.userData));
+          navigate("/");
+        }
+      })
+      .catch((e) => {
+        console.log(e);
+        setLoginError(true);
+        setTimeout(() => {
+          setLoginError(false);
+        }, 5000);
+      });
   };
 
   return (
@@ -46,6 +56,7 @@ const Login = () => {
       <div className={classes.mainDiv}>
         <div className={classes.container}>
           <h3 className="logo-3">Login</h3>
+          {loginError && <p>Something went wrong</p>}
           <form>
             <div className={classes.user}>
               <label>Username</label>
