@@ -29,10 +29,7 @@ const LandingPage = () => {
                 <div className={classes.productBio}>
                   <p>{el.productName}</p>
                   <p>&#8377; {el.productPrice}</p>
-                  <div className={classes.btnBox}>
-                    <button className={classes.btn}>Buy Now</button>
-                    <button className={classes.btn}>Add to Cart</button>
-                  </div>
+                  <p>{el.productDescription}</p>
                 </div>
               </NavLink>
             );
