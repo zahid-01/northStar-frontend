@@ -27,7 +27,7 @@ const Navbar = () => {
             navigate("/");
           }}
         />
-        <h2>Welcome to North Star</h2>
+        <h2>North Star</h2>
         <div className={classes.headerBtn}>
           {!isLoggedIn && (
             <>

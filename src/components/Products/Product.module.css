@@ -9,9 +9,6 @@
   gap: 11px;
 }
 .carousel {
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
@@ -29,10 +26,12 @@
   cursor: pointer;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(255, 255, 255, 0.3);
+  transition: all 0.3s;
 }
 .corouselbutton:hover,
 .btn:hover {
-  background: #000;
+  background: #7950f2;
+  color: #fff;
 }
 .productBtn {
   display: flex;

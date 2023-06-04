@@ -6,6 +6,8 @@ import Signup from "./Pages/authentication/SignUp/Signup";
 import LandingPage, { fetchProducts } from "./components/MainPage/LandingPage";
 import FooterPart from "./components/Footer/FooterPart";
 import ErrorPage from "./Pages/Error/errorPage";
+import Product from "./components/Products/Products";
+import { fetchProductDescription } from "./components/Products/Products";
 
 import "./App.css";
 import MainLayout from "./UI/MainLayout";
@@ -28,6 +30,11 @@ const router = createBrowserRouter([
       {
         path: "/signUp",
         element: <Signup />,
+      },
+      {
+        path: "product/:id",
+        element: <Product />,
+        loader: fetchProductDescription,
       },
     ],
   },

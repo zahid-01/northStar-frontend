@@ -1,13 +1,7 @@
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
 .FooterCont {
   display: flex;
   justify-content: space-evenly;
-  /* margin: 31px 0 21px 0; */
-  margin-top: auto;
+  margin: 31px 0 21px 0;
 }
 .FooterAdd,
 .FooterDet {
@@ -22,6 +16,9 @@ h6 {
 a {
   text-decoration: none;
   color: #fff;
+}
+a:hover {
+  text-decoration: underline green;
 }
 .copy {
   display: flex;
