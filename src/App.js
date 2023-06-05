@@ -8,6 +8,8 @@ import FooterPart from "./components/Footer/FooterPart";
 import ErrorPage from "./Pages/Error/errorPage";
 import Product from "./components/Products/Products";
 import { fetchProductDescription } from "./components/Products/Products";
+import InventoryPage from "./components/Inventory/InventoryInterface/InventoryPage";
+import ProductUpload from "./components/Inventory/ProductUploads/ProductUpload";
 
 import "./App.css";
 import MainLayout from "./UI/MainLayout";
@@ -35,6 +37,14 @@ const router = createBrowserRouter([
         path: "product/:id",
         element: <Product />,
         loader: fetchProductDescription,
+      },
+      {
+        path: "/inventory",
+        element: <InventoryPage />,
+      },
+      {
+        path: "/addProduct",
+        element: <ProductUpload />,
       },
     ],
   },

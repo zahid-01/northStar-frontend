@@ -2,6 +2,9 @@
   /* display: flex; */
   font-size: 21px;
   margin-top: 30px;
+  border: black;
+  border: solid;
+  border-radius: 10px;
 }
 .headerCont {
   display: flex;
@@ -19,18 +22,19 @@
   padding: 8px;
   border-radius: 8px;
   transition: all 0.3s;
+  color: black;
 }
 .btn:hover {
   cursor: pointer;
   background: #a70f0f;
-  color: #fff;
+  color: black;
 }
 .btn:active {
   color: red;
 }
 
 .user {
-  color: white;
+  color: black;
 }
 
 img {

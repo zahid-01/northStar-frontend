@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import { loginSliceActions } from "../../Store/loginSlice";
 
 import classes from "./Navbar.module.css";
-import logo from "../../Assets/Imgs/images.png";
+import logo from "../../Assets/Imgs/796994.png";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -29,6 +29,11 @@ const Navbar = () => {
         />
         <h2>North Star</h2>
         <div className={classes.headerBtn}>
+          {
+            <NavLink className={classes.btn} to="inventory">
+              Inventory
+            </NavLink>
+          }
           {!isLoggedIn && (
             <>
               <NavLink className={[classes.btn]} to="login">

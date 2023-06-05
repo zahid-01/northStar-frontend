@@ -1,4 +1,4 @@
-import React from "react";
+import logo from "../../Assets/Imgs/796994.png";
 import classes from "./Footer.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -10,7 +10,7 @@ const FooterPart = () => {
   return (
     <>
       <div className={classes.FooterCont}>
-        <img alt="Logo" />
+        <img alt="Logo" src={logo} />
         <div className={classes.FooterAdd}>
           <h6>Address</h6>
           <p>Mir Mall Complex opposite District Police Lines Srinagar</p>
