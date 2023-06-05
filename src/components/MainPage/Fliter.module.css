@@ -1,5 +1,5 @@
 .filterCont {
-  margin-top: 30px;
+  margin: 30px 30px 50px 30px;
   display: flex;
   justify-content: space-between;
 }

@@ -1,6 +1,39 @@
 .main {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 0 8px 2px rgba(255, 155, 255, 0.2);
+  height: 60vh;
 }
 .list {
-  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 11px;
+  gap: 28px;
+  padding: 24px;
+  font-size: 18px;
+  list-style: none;
+}
+.list li {
+  border: 1px solid #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+.list li:hover {
+  background: #7650fa;
+}
+h1 {
+  background-image: linear-gradient(
+    to right,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
+  padding: 8px;
+  border-radius: 8px;
 }

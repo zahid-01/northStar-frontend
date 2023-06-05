@@ -5,6 +5,7 @@ import classes from "./Inventory.module.css";
 const InventoryPage = () => {
   return (
     <div className={classes.main}>
+      <h1>UPDATE Inventory</h1>
       <ul className={classes.list}>
         <li>
           <NavLink to="/addProduct">Add Product</NavLink>

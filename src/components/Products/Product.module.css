@@ -7,6 +7,8 @@
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 11px;
+  padding: 11px;
+  margin: 100px 28px 50px 28px;
 }
 .carousel {
   width: 100%;
@@ -51,9 +53,9 @@
 .carouselimage {
   max-width: 100%;
   height: auto;
-  border-radius: 5px;
+  border-radius: 12px;
   box-shadow: 0 2px 5px rgba(255, 255, 255, 0.3);
-  margin: 0 10px;
+  /* margin: 0 10px; */
 }
 .desCont {
   display: flex;
