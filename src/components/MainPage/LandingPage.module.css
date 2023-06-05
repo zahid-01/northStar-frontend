@@ -10,4 +10,5 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 21px;
+  font-size: 18px;
 }

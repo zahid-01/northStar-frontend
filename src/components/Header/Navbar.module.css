@@ -1,10 +1,17 @@
 .header {
-  /* display: flex; */
   font-size: 21px;
-  margin-top: 30px;
+  margin: 28px;
   border: black;
-  border: solid;
-  border-radius: 10px;
+  /* box-shadow: 2px 2px 8px 2px rgba(255, 255, 255, 0.566); */
+  border-radius: 11px;
+  background-image: linear-gradient(
+    to right,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
 }
 .headerCont {
   display: flex;
@@ -22,11 +29,11 @@
   padding: 8px;
   border-radius: 8px;
   transition: all 0.3s;
-  color: black;
+  color: #fff;
 }
 .btn:hover {
   cursor: pointer;
-  background: #a70f0f;
+  background: #fff;
   color: black;
 }
 .btn:active {
@@ -34,7 +41,7 @@
 }
 
 .user {
-  color: black;
+  color: #fff;
 }
 
 img {

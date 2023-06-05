@@ -89,7 +89,6 @@ const ProductUpload = () => {
             className={classes.textarea}
           ></textarea>
         </div>
-        <label className={classes.label}>Product Code:</label>
 
         <div className={classes.formGroup}>
           <label className={classes.label}>Product Images:</label>

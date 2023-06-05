@@ -17,11 +17,10 @@ a {
   text-decoration: none;
   color: #fff;
 }
-a:hover {
-  text-decoration: underline green;
-}
+
 .copy {
   display: flex;
   justify-content: space-between;
-  padding: 21px;
+  padding: 14px 14px 14px 7px;
+  font-size: 18px;
 }
