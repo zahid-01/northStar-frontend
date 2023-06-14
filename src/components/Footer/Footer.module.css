@@ -2,6 +2,8 @@
   display: flex;
   justify-content: space-evenly;
   margin: 31px 0 21px 0;
+  background: #172337;
+  height: 200px;
 }
 .FooterAdd,
 .FooterDet {

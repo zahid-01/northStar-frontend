@@ -34,13 +34,13 @@ const FooterPart = () => {
           <a href="terms">Terms & Conditions</a>
           <a href="about">About Us</a>
         </div>
-      </div>
-      <div className={classes.copy}>
-        <p>&copy; Copyright All rights reserved NorthStar</p>
-        <a href="developer">
-          Developers Link
-          <FontAwesomeIcon icon={faHeart} />
-        </a>
+        <div className={classes.copy}>
+          <p>&copy; Copyright All rights reserved NorthStar</p>
+          <a href="developer">
+            Developers Link
+            <FontAwesomeIcon icon={faHeart} />
+          </a>
+        </div>
       </div>
     </>
   );

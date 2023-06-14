@@ -31,7 +31,9 @@ const loadProducts = async () => {
   const products = await axios({
     method: "GET",
     url: `${URL}products`,
-  }).catch((e) => console.log(e));
+  }).catch((e) => {
+    throw new Error();
+  });
 
   return products.data;
 };

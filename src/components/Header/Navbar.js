@@ -1,6 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 
 import { loginSliceActions } from "../../Store/loginSlice";
 
@@ -13,6 +12,7 @@ const Navbar = () => {
   const { isLoggedIn, userInfo } = useSelector((state) => state.login);
 
   const logoutHandler = () => {
+    localStorage.removeItem("JWT");
     dispatch(loginSliceActions.setLogin(false));
     dispatch(loginSliceActions.setUserInfo(null));
   };
@@ -29,11 +29,16 @@ const Navbar = () => {
         />
         <h2>North Star</h2>
         <div className={classes.headerBtn}>
-          {
-            <NavLink className={classes.btn} to="inventory">
-              Inventory
-            </NavLink>
-          }
+          {isLoggedIn && (
+            <>
+              <NavLink className={classes.btn} to="inventory">
+                Inventory
+              </NavLink>
+              <NavLink className={classes.btn} to="myOrders">
+                My Orders
+              </NavLink>
+            </>
+          )}
           {!isLoggedIn && (
             <>
               <NavLink className={[classes.btn]} to="login">

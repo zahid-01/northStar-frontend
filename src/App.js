@@ -10,6 +10,8 @@ import Product from "./components/Products/Products";
 import { fetchProductDescription } from "./components/Products/Products";
 import InventoryPage from "./components/Inventory/InventoryInterface/InventoryPage";
 import ProductUpload from "./components/Inventory/ProductUploads/ProductUpload";
+import MyOrders from "./components/Orders/MyOrders/MyOrders";
+import { tokenLoader } from "./Utilities/tokenLoader";
 
 import "./App.css";
 import MainLayout from "./UI/MainLayout";
@@ -19,6 +21,8 @@ const router = createBrowserRouter([
     path: "/",
     element: <MainLayout />,
     errorElement: <ErrorPage />,
+    loader: tokenLoader,
+    id: "token",
     children: [
       {
         path: "/",
@@ -46,16 +50,22 @@ const router = createBrowserRouter([
         path: "/addProduct",
         element: <ProductUpload />,
       },
+      {
+        path: "/myOrders",
+        element: <MyOrders />,
+      },
     ],
   },
 ]);
 
 function App() {
   return (
-    <>
-      <RouterProvider router={router} />
-      <FooterPart />
-    </>
+    <div className="boddy">
+      <div className="content">
+        <RouterProvider router={router} />
+        <FooterPart />
+      </div>
+    </div>
   );
 }
 
