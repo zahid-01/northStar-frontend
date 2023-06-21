@@ -1,7 +1,9 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate, NavLink } from "react-router-dom";
+import axios from "axios";
 
 import { loginSliceActions } from "../../Store/loginSlice";
+import { URL } from "../../Assets/environment/url";
 
 import classes from "./Navbar.module.css";
 import logo from "../../Assets/Imgs/796994.png";
@@ -11,10 +13,20 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const { isLoggedIn, userInfo } = useSelector((state) => state.login);
 
-  const logoutHandler = () => {
-    localStorage.removeItem("JWT");
-    dispatch(loginSliceActions.setLogin(false));
-    dispatch(loginSliceActions.setUserInfo(null));
+  const logoutHandler = async () => {
+    await axios({
+      method: "GET",
+      url: `${URL}user/logout`,
+    })
+      .then((res) => {
+        if (res.statusText === "OK") {
+          dispatch(loginSliceActions.setLogin(false));
+          dispatch(loginSliceActions.setUserInfo(null));
+        }
+      })
+      .catch((e) => {
+        alert("OOps something went wrong!");
+      });
   };
 
   return (

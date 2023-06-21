@@ -14,9 +14,7 @@ const MyOrders = () => {
       await axios({
         method: "GET",
         url: `${URL}orders/myOrders`,
-        headers: {
-          Authorization: "Bearer " + localStorage.getItem("JWT"),
-        },
+        withCredentials: true,
       })
         .then((res) => setMyOrders(res.data.data))
         .catch((e) => console.log(e));

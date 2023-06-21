@@ -2,7 +2,6 @@ import { URL } from "../../../Assets/environment/url";
 import classes from "./OrderCars.module.css";
 
 const OrderCard = ({ orderItem }) => {
-  console.log(orderItem);
   return (
     <>
       <div className={classes.BuyCont}>

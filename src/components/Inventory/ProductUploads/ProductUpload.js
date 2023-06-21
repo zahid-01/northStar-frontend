@@ -20,7 +20,7 @@ const ProductUpload = () => {
     form.append("productPrice", productPrice);
     form.append("productDescription", productDescription);
     form.append("productCode", productCode);
-    for (let i = 0; i < images.length; i++) {
+    for (let i = 0; i < images.length && i < 3; i++) {
       form.append("images", images[i]);
     }
 

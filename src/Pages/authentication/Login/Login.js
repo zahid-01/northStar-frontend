@@ -34,10 +34,10 @@ const Login = () => {
         email,
         password,
       },
+      withCredentials: true,
     })
       .then((res) => {
         if (res.statusText === "OK") {
-          localStorage.setItem("JWT", res.data.token);
           dispatch(loginSliceActions.setLogin(true));
           dispatch(loginSliceActions.setUserInfo(res.data.userData));
           navigate("/");
