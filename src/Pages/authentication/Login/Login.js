@@ -4,6 +4,7 @@ import { useState } from "react";
 import axios from "axios";
 
 import { loginSliceActions } from "../../../Store/loginSlice";
+import { URL } from "../../../Assets/environment/url";
 
 import classes from "./Login.module.css";
 
@@ -29,7 +30,7 @@ const Login = () => {
 
     await axios({
       method: "POST",
-      url: "http://localhost:5000/user/login",
+      url: `${URL}user/login`,
       data: {
         email,
         password,
