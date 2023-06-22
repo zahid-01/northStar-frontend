@@ -74,8 +74,7 @@ function App() {
         url: `${URL}user/isLoggedIn`,
       })
         .then((res) => {
-          console.log(res);
-          if (res.statusText === "OK") {
+          if (res.status === 200) {
             dispatch(loginSliceActions.setLogin(true));
             dispatch(loginSliceActions.setUserInfo(res.data.userData));
           } else {
