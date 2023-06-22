@@ -38,6 +38,7 @@ const Login = () => {
       withCredentials: true,
     })
       .then((res) => {
+        console.log(res);
         if (res.statusText === "OK") {
           dispatch(loginSliceActions.setLogin(true));
           dispatch(loginSliceActions.setUserInfo(res.data.userData));
