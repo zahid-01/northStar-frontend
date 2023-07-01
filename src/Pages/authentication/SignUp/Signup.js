@@ -74,46 +74,46 @@ const Signup = () => {
           <h3 className="logo-3">Sign-up</h3>
           <form className={classes.signup}>
             <div className={`${classes.userName} `}>
-              <label>Name</label>
+              <label>Name:</label>
               <input
                 type="text"
-                placeholder="NorthStar"
+                placeholder="Enter Your Name"
                 onChange={nameChangeHandler}
               ></input>
             </div>
             <div className={classes.userEmail}>
-              <label>Email</label>
+              <label>Email:</label>
               <input
                 type="email"
-                placeholder="NorthStar@example.com"
+                placeholder="Enter Your Email"
                 onChange={emailChangeHandler}
               ></input>
             </div>
             <div className={`${classes.userPassword} ${classes.userPass1}`}>
-              <label>Password</label>
+              <label>Password:</label>
               <input
                 type="password"
-                placeholder="*****"
+                placeholder="Enter Password"
                 onChange={passwordChangeHandler}
               ></input>
             </div>
             <div className={`${classes.userPassword}`}>
-              <label>Confirm</label>
-              <input type="password" placeholder="*****"></input>
+              <label>Confirm:</label>
+              <input type="password" placeholder="Confirm Password"></input>
             </div>
             <div className={`${classes.usernumber}`}>
-              <label>Phone</label>
+              <label>Phone:</label>
               <input
                 type="number"
-                placeholder="9797979797"
+                placeholder="Enter Phone No"
                 onChange={phoneChangeHandler}
               ></input>
             </div>
             <div className={`${classes.useraddress}`}>
-              <label>Address</label>
+              <label>Address:</label>
               <input
                 type="text"
-                placeholder="Srinagar"
+                placeholder="Enter Address"
                 onChange={addressChangeHandler}
               ></input>
             </div>

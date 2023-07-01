@@ -2,21 +2,21 @@
 body {
   background: rgb(2, 0, 36);
 
-  color: #fff;
+  /* color: #fff; */
 }
 .container {
-  border: 1px solid #fff;
+  border: 1px solid #000;
   border-radius: 8px;
   padding: 18px;
-  height: 60vh;
 }
 .mainDiv {
+  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   margin-top: 21px;
-  box-shadow: 2px 2px 8px 2px rgba(255, 155, 255, 0.2);
+  box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.2);
 }
 h1 {
   margin-bottom: 51px;
@@ -26,57 +26,49 @@ h3 {
   text-align: center;
   margin-bottom: 41px;
   font-size: 31px;
-  font-weight: 400;
+  font-weight: 700;
+  color: #000;
 }
 .user {
-  width: 100%;
-  height: 100%;
   margin-bottom: 21px;
 }
 .user label,
 .userPass label {
-  font-size: 21px;
-  padding-right: 8px;
+  font-size: 28px;
+
+  color: #000;
 }
 .user input {
-  border: 1px solid #dfdfdf;
-  padding: 11px;
-  border-radius: 11px;
+  border: transparent;
+  border-bottom: 1px solid #000;
+
   font-size: 18px;
 }
 .userPass input {
-  border: 1px solid #dfdfdf;
-  padding: 11px;
-  border-radius: 11px;
+  border: transparent;
+  border-bottom: 1px solid #000;
+
   font-size: 18px;
 }
 .userPass {
   margin-bottom: 21px;
 }
 .btn {
-  border: 1px solid #afafaf;
+  border: 1px solid #000;
   background: none;
   padding: 12px 24px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   border-radius: 8px;
-  color: #fff;
+  color: #000;
   cursor: pointer;
   transition: all 0.3s;
 }
 .btnDiv {
   margin-bottom: 21px;
 }
-.signupDiv {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* font-size: 21px; */
-  justify-content: center;
-  gap: 14px;
-}
+
 .btn:hover {
   background: #7950f2;
+  color: #fff;
 }

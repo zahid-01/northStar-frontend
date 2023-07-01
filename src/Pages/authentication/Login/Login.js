@@ -16,6 +16,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   const [loginError, setLoginError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const emailChangeHandler = (e) => {
     setEmail(e.target.value);
@@ -43,12 +44,23 @@ const Login = () => {
           dispatch(loginSliceActions.setUserInfo(res.data.userData));
           navigate("/");
         }
+
+        if (res.status === 203) {
+          setLoginError(true);
+          setErrorMessage(res.data.message);
+          setTimeout(() => {
+            setLoginError(false);
+            setErrorMessage("");
+          }, 5000);
+        }
       })
       .catch((e) => {
         console.log(e);
         setLoginError(true);
+        setErrorMessage(e.response.data.message);
         setTimeout(() => {
           setLoginError(false);
+          setErrorMessage("");
         }, 5000);
       });
   };
@@ -58,14 +70,14 @@ const Login = () => {
       <div className={classes.mainDiv}>
         <div className={classes.container}>
           <h3 className="logo-3">Login</h3>
-          {loginError && <p>Something went wrong</p>}
+          {loginError && <p>{errorMessage}</p>}
           <form>
             <div className={classes.user}>
-              <label>Username</label>
-              <input type="text" onChange={emailChangeHandler}></input>
+              <label>Username:</label>
+              <input type="email" onChange={emailChangeHandler}></input>
             </div>
             <div className={classes.userPass}>
-              <label>Password</label>
+              <label>Password:</label>
               <input type="password" onChange={passwordChangeHandler}></input>
             </div>
           </form>

@@ -88,12 +88,10 @@ function App() {
     checkLoginState();
   }, [dispatch]);
   return (
-    <div className="boddy">
-      <div className="content">
-        <RouterProvider router={router} />
-        <FooterPart />
-      </div>
-    </div>
+    <>
+      <RouterProvider router={router} />
+      <FooterPart />
+    </>
   );
 }
 

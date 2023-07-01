@@ -16,10 +16,7 @@ const FooterPart = () => {
           <p>Mir Mall Complex opposite District Police Lines Srinagar</p>
           <p>J&K 190001</p>
           <a href="9797979797">
-            <FontAwesomeIcon
-              icon={faPhone}
-              style={{ color: "#fff", fontSize: "10px" }}
-            />
+            <FontAwesomeIcon icon={faPhone} style={{ fontSize: "12px" }} />
             9797979797
           </a>
           <a href="northstar@gmail.com">
@@ -34,13 +31,13 @@ const FooterPart = () => {
           <a href="terms">Terms & Conditions</a>
           <a href="about">About Us</a>
         </div>
-        <div className={classes.copy}>
-          <p>&copy; Copyright All rights reserved NorthStar</p>
-          <a href="developer">
-            Developers Link
-            <FontAwesomeIcon icon={faHeart} />
-          </a>
-        </div>
+      </div>
+      <div className={classes.copy}>
+        <p>&copy; Copyright All rights reserved NorthStar</p>
+        <a href="developer">
+          Developers Link
+          <FontAwesomeIcon icon={faHeart} />
+        </a>
       </div>
     </>
   );

@@ -2,22 +2,23 @@
 body {
   background: rgb(2, 0, 36);
   text-align: center;
-  align: center;
-  color: #fff;
+
+  color: #000;
 }
 .container {
   border-radius: 8px;
-  border: 1px solid #fff;
   padding: 18px;
+  /* height: auto; */
+  width: 80%;
 }
 .mainDiv1 {
-  height: 60vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   margin-top: 21px;
-  box-shadow: 2px 2px 8px 2px rgba(255, 155, 255, 0.2);
+  box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.2);
 }
 h1 {
   margin-bottom: 51px;
@@ -31,18 +32,19 @@ h3 {
 }
 
 .btn {
-  border: 1px solid #afafaf;
+  border: 1px solid #000;
   background: none;
   padding: 12px 24px;
   font-size: 16px;
   font-weight: 700;
   border-radius: 8px;
-  color: #fff;
+  color: #000;
   cursor: pointer;
   transition: all 0.3s;
 }
 .btn:hover {
   background: #7950f2;
+  color: #fff;
 }
 .signup {
   display: grid;
@@ -52,15 +54,23 @@ h3 {
 }
 
 form input {
-  padding: 11px;
-  border-radius: 8px;
+  border: transparent;
   outline: none;
+  border-bottom: 1px solid #000;
   margin-bottom: 24px;
+  font-size: 18px;
 }
 form label {
   font-size: 18px;
   padding: 8px;
+  font-size: 21px;
 }
 .error {
   border: 2px solid red;
+}
+@media (width: 390px) {
+  .signup {
+    display: flex;
+    flex-direction: column;
+  }
 }

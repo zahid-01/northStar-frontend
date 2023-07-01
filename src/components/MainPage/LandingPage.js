@@ -13,7 +13,15 @@ const LandingPage = () => {
   const { product } = useLoaderData();
 
   return (
-    <Suspense fallback={<p>Loading</p>}>
+    <Suspense
+      fallback={
+        <div className={classes.container}>
+          <div className={classes.loaderContainer}>
+            <div className={classes.spinner}></div>
+          </div>
+        </div>
+      }
+    >
       <Filter />
       <div className={classes.landingCont}>
         <div className={classes.productsCont}>
