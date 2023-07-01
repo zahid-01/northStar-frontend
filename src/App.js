@@ -13,6 +13,7 @@ import { fetchProductDescription } from "./components/Products/Products";
 import InventoryPage from "./components/Inventory/InventoryInterface/InventoryPage";
 import ProductUpload from "./components/Inventory/ProductUploads/ProductUpload";
 import MyOrders from "./components/Orders/MyOrders/MyOrders";
+import Checkout from "./components/Orders/Checkout/Checkout";
 import { tokenLoader } from "./Utilities/tokenLoader";
 import { URL } from "./Assets/environment/url";
 import { loginSliceActions } from "./Store/loginSlice";
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
       {
         path: "/myOrders",
         element: <MyOrders />,
+      },
+      {
+        path: "/checkout",
+        element: <Checkout />,
       },
     ],
   },

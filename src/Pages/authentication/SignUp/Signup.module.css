@@ -7,8 +7,9 @@ body {
 }
 .container {
   border-radius: 8px;
-  padding: 18px;
-  /* height: auto; */
+  padding: 18px 20px 48px 20px;
+  margin: auto;
+  background: rgb(227, 230, 230);
   width: 80%;
 }
 .mainDiv1 {
@@ -18,7 +19,7 @@ body {
   align-items: center;
   text-align: center;
   margin-top: 21px;
-  box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 8px 2px rgba(227, 230, 230, 0.2);
 }
 h1 {
   margin-bottom: 51px;
@@ -33,7 +34,7 @@ h3 {
 
 .btn {
   border: 1px solid #000;
-  background: none;
+
   padding: 12px 24px;
   font-size: 16px;
   font-weight: 700;
@@ -41,6 +42,7 @@ h3 {
   color: #000;
   cursor: pointer;
   transition: all 0.3s;
+  background: #e3e6e6;
 }
 .btn:hover {
   background: #7950f2;
@@ -56,6 +58,7 @@ h3 {
 form input {
   border: transparent;
   outline: none;
+  background: none;
   border-bottom: 1px solid #000;
   margin-bottom: 24px;
   font-size: 18px;
@@ -65,12 +68,61 @@ form label {
   padding: 8px;
   font-size: 21px;
 }
+form ::placeholder {
+  font-size: 18px;
+  text-align: center;
+}
 .error {
   border: 2px solid red;
 }
-@media (width: 390px) {
+@media (max-width: 390px) {
   .signup {
     display: flex;
     flex-direction: column;
+  }
+
+  .signup > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .signup input {
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 12px;
+  }
+
+  .signup input[type="text"],
+  .signup input[type="email"],
+  .signup input[type="password"],
+  .signup input[type="number"] {
+    width: 70%;
+  }
+}
+@media (max-width: 412px) {
+  .signup {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .signup > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .signup input {
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 12px;
+  }
+
+  .signup input[type="text"],
+  .signup input[type="email"],
+  .signup input[type="password"],
+  .signup input[type="number"] {
+    width: 70%;
   }
 }

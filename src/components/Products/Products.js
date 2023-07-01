@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import axios from "axios";
@@ -48,7 +49,9 @@ const Product = (props) => {
             <p className={classes.price}>&#8377; {product.productPrice}</p>
             <div className={classes.productBtn}>
               <button className={classes.btn}>Add to Cart</button>
-              <button className={classes.btn}>Buy Now</button>
+              <NavLink className={classes.btn} to="/checkout" state={product}>
+                Buy Now
+              </NavLink>
             </div>
           </div>
         </div>

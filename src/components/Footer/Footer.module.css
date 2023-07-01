@@ -1,8 +1,11 @@
 .FooterCont {
   display: flex;
   justify-content: space-evenly;
-  margin: 31px 0 21px 0;
+  margin: 31px 0 0 0;
   color: #000;
+  background: #e3e6e6;
+  padding-top: 12px;
+  border-radius: 8px 8px 0 0;
 }
 .FooterAdd,
 .FooterDet {
@@ -17,12 +20,15 @@ h6 {
 a {
   text-decoration: none;
   color: #000;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 .copy {
   display: flex;
   justify-content: space-between;
-  padding: 14px 14px 14px 7px;
+  padding: 14px 14px 0 7px;
   font-size: 18px;
   color: #000;
+  background: #e3e6e6;
 }
