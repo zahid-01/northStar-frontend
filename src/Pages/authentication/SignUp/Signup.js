@@ -2,7 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import axios from "axios";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { loginSliceActions } from "../../../Store/loginSlice";
 
 import classes from "./Signup.module.css";
@@ -17,6 +18,7 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const nameChangeHandler = (e) => {
     const nameInput = e.target.value;
@@ -43,6 +45,9 @@ const Signup = () => {
     setAddress(addressInput);
   };
 
+  const togglePasswordVisibility = () => {
+    setShowPassword((prevState) => !prevState);
+  };
   const submitHandler = async (e) => {
     e.preventDefault();
 
@@ -91,11 +96,25 @@ const Signup = () => {
             </div>
             <div className={`${classes.userPassword} ${classes.userPass1}`}>
               <label>Password:</label>
+
               <input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 placeholder="Enter Password"
                 onChange={passwordChangeHandler}
-              ></input>
+              />
+              {showPassword ? (
+                <FontAwesomeIcon
+                  icon={faEye}
+                  onClick={togglePasswordVisibility}
+                  style={{ cursor: "pointer" }}
+                />
+              ) : (
+                <FontAwesomeIcon
+                  icon={faEyeSlash}
+                  onClick={togglePasswordVisibility}
+                  style={{ cursor: "pointer" }}
+                />
+              )}
             </div>
             <div className={`${classes.userPassword}`}>
               <label>Confirm:</label>

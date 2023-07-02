@@ -2,7 +2,8 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { loginSliceActions } from "../../../Store/loginSlice";
 import { URL } from "../../../Assets/environment/url";
 
@@ -17,6 +18,7 @@ const Login = () => {
 
   const [loginError, setLoginError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const emailChangeHandler = (e) => {
     setEmail(e.target.value);
@@ -24,6 +26,9 @@ const Login = () => {
 
   const passwordChangeHandler = (e) => {
     setPassword(e.target.value);
+  };
+  const togglePasswordVisibility = () => {
+    setShowPassword((prevState) => !prevState);
   };
 
   const loginHandler = async (e) => {
@@ -78,7 +83,23 @@ const Login = () => {
             </div>
             <div className={classes.userPass}>
               <label>Password:</label>
-              <input type="password" onChange={passwordChangeHandler}></input>
+              <input
+                type={showPassword ? "text" : "password"}
+                onChange={passwordChangeHandler}
+              ></input>
+              {showPassword ? (
+                <FontAwesomeIcon
+                  icon={faEye}
+                  onClick={togglePasswordVisibility}
+                  style={{ cursor: "pointer" }}
+                />
+              ) : (
+                <FontAwesomeIcon
+                  icon={faEyeSlash}
+                  onClick={togglePasswordVisibility}
+                  style={{ cursor: "pointer" }}
+                />
+              )}
             </div>
           </form>
           <div className={classes.btnDiv}>
