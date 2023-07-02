@@ -32,3 +32,11 @@
   color: #fff;
   background: #000;
 }
+@media (max-width: 768px) {
+  .filterCont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+}

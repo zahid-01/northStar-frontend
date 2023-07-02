@@ -3,6 +3,7 @@
 }
 .deliveryBox h2 {
   margin-bottom: 21px;
+  color: #fff;
 }
 .deliveryDetail {
   height: 50vh;
@@ -39,12 +40,13 @@
   background: #000;
   color: #fff;
   width: 10vw;
-  margin-left: 30%;
+  font-size: 21px;
+  margin-left: auto;
 }
 .details span {
   margin-bottom: 21px;
   font-weight: 700;
-  color: #4a4a4a;
+  color: #3a3a3a;
 }
 
 /* //////////////////// */
@@ -56,9 +58,9 @@
 .tax p::before {
   content: "";
   display: block;
-  width: 60vw;
-  height: 2px;
-  left: -21px;
+  width: 55vw;
+  height: 1px;
+  left: 15px;
   top: 118%;
   position: absolute;
   background: #000;
@@ -66,9 +68,9 @@
 .tax p::after {
   content: "";
   display: block;
-  width: 60vw;
-  height: 2px;
-  left: 1px;
+  width: 50vw;
+  height: 1px;
+  left: -21px;
   top: 118%;
   background: #000;
   position: absolute;
@@ -81,7 +83,7 @@
 }
 
 .summary h2 {
-  font-size: 20px;
+  font-size: 24px;
   margin-top: 0;
   margin-bottom: 24px;
 }
@@ -92,6 +94,7 @@
   background: #fff;
   color: #000;
   padding: 21px;
+  font-size: 18px;
 }
 
 .subTotal,
@@ -124,7 +127,7 @@ span {
 }
 .payment {
   padding: 20px;
-
+  color: #fff;
   width: 100vw;
   margin: 0 auto;
 }
@@ -179,5 +182,28 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0;
+  }
+  .summary {
+    width: 80%;
+  }
+  .tax p::before {
+    content: "";
+    display: block;
+    width: 55vw;
+    height: 1px;
+    left: 15px;
+    top: 118%;
+    position: absolute;
+    background: #000;
+  }
+  .tax p::after {
+    content: "";
+    display: block;
+    width: 73vw;
+    height: 1px;
+    left: -21px;
+    top: 118%;
+    background: #000;
+    position: absolute;
   }
 }

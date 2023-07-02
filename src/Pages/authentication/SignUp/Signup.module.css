@@ -75,6 +75,21 @@ form ::placeholder {
 .error {
   border: 2px solid red;
 }
+
+/* ******media queries********** */
+@media (max-width: 768px) {
+  .signup {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+  }
+  .signup input[type="text"],
+  .signup input[type="email"],
+  .signup input[type="password"],
+  .signup input[type="number"] {
+    width: 100%;
+  }
+}
 @media (max-width: 390px) {
   .signup {
     display: flex;

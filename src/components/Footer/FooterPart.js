@@ -13,8 +13,10 @@ const FooterPart = () => {
         <img alt="Logo" src={logo} />
         <div className={classes.FooterAdd}>
           <h6>Address</h6>
-          <p>Mir Mall Complex opposite District Police Lines Srinagar</p>
-          <p>J&K 190001</p>
+          <p className={classes.footAdd}>
+            Mir Mall Complex opposite District Police Lines Srinagar
+          </p>
+          <p className={classes.footAdd}>J&K 190001</p>
           <a href="9797979797">
             <FontAwesomeIcon icon={faPhone} style={{ fontSize: "12px" }} />
             9797979797
@@ -33,7 +35,9 @@ const FooterPart = () => {
         </div>
       </div>
       <div className={classes.copy}>
-        <p>&copy; Copyright All rights reserved NorthStar</p>
+        <p className={classes.footAdd}>
+          &copy; Copyright All rights reserved NorthStar
+        </p>
         <a href="developer">
           Developers Link
           <FontAwesomeIcon icon={faHeart} />

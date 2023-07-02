@@ -82,6 +82,30 @@ const ProductUpload = () => {
           />
         </div>
         <div className={classes.formGroup}>
+          <label className={classes.label}>
+            Product Category:
+            <select className={classes.dropdown}>
+              <option value="monitors">Monitors</option>
+              <option value="printers">Printers</option>
+              <option value="all-in-one">All-in-one</option>
+              <option value="laptops">Laptops</option>
+              <option value="accessories">Accessories</option>
+            </select>
+          </label>
+        </div>
+        <div className={classes.formGroup}>
+          <label className={classes.label}>
+            Product Brand:
+            <select className={classes.dropdown}>
+              <option value="HP">HP</option>
+              <option value="Dell">Dell</option>
+              <option value="Samsung">Samsung</option>
+              <option value="lenovo">Lenovo</option>
+              <option value="acer">Acer</option>
+            </select>
+          </label>
+        </div>
+        <div className={classes.formGroup}>
           <label className={classes.label}>Product Description:</label>
           <textarea
             value={productDescription}
