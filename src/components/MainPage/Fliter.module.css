@@ -39,4 +39,15 @@
     align-items: center;
     gap: 16px;
   }
+  @media (max-width: 290px) {
+    .filterCont {
+      font-size: 12px;
+    }
+    .filterCont > h2 {
+      font-size: 18px;
+    }
+    .filterBox > p {
+      font-weight: 400;
+    }
+  }
 }

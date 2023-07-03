@@ -66,3 +66,11 @@ a {
     gap: 14px;
   }
 }
+@media (max-width: 290px) {
+  a {
+    font-size: 12px;
+  }
+  .footAdd {
+    font-size: 12px;
+  }
+}

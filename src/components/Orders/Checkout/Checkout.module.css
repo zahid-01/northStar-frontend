@@ -282,4 +282,28 @@ button:hover {
     justify-content: space-around;
     font-size: 12px;
   }
+  @media (max-width: 290px) {
+    .deliveryDetail {
+      display: flex;
+      flex-direction: column;
+      height: 70vh;
+    }
+    .imgBox {
+      transform: scale(0.5);
+    }
+    .details {
+      font-size: 14px;
+    }
+    .details select {
+      width: 50%;
+    }
+    .summaryDetails {
+      font-size: 12px;
+    }
+    .select {
+      display: flex;
+      justify-content: space-around;
+      font-size: 10px;
+    }
+  }
 }
