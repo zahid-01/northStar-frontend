@@ -46,7 +46,7 @@ h3 {
 }
 .btn:hover {
   background: #7950f2;
-  color: #fff;
+  color: #000;
 }
 .signup {
   display: grid;
@@ -107,6 +107,15 @@ form ::placeholder {
     display: flex;
     flex-direction: column;
   }
+  .mainDiv1 {
+    height: auto;
+    position: relative;
+  }
+  .eye {
+    position: absolute;
+    left: 69%;
+    top: 44%;
+  }
 
   .signup > div {
     display: flex;
@@ -144,6 +153,9 @@ form ::placeholder {
     border: 1px solid #000;
     border-radius: 8px;
     padding: 12px;
+  }
+  .mainDiv1 {
+    height: auto;
   }
 
   .signup input[type="text"],

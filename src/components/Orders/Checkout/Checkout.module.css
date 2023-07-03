@@ -207,3 +207,79 @@ button:hover {
     position: absolute;
   }
 }
+@media (max-width: 412px) {
+  .deliveryDetail {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+  }
+  .details select {
+    width: 50%;
+  }
+  .summary {
+    width: auto;
+  }
+  .tax p::before {
+    content: "";
+    display: block;
+    width: 55vw;
+    height: 1px;
+    left: auto;
+    top: 118%;
+    position: absolute;
+    background: #000;
+  }
+  .tax p::after {
+    content: "";
+    display: block;
+    width: 73vw;
+    height: 1px;
+    left: auto;
+    top: 118%;
+    background: #000;
+    position: absolute;
+  }
+  .select {
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+  }
+}
+@media (max-width: 390px) {
+  .deliveryDetail {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+  }
+  .details select {
+    width: 50%;
+  }
+  .summary {
+    width: auto;
+  }
+  .tax p::before {
+    content: "";
+    display: block;
+    width: 55vw;
+    height: 1px;
+    left: auto;
+    top: 118%;
+    position: absolute;
+    background: #000;
+  }
+  .tax p::after {
+    content: "";
+    display: block;
+    width: 73vw;
+    height: 1px;
+    left: auto;
+    top: 118%;
+    background: #000;
+    position: absolute;
+  }
+  .select {
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+  }
+}

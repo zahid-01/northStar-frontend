@@ -53,14 +53,17 @@ img {
 }
 @media (max-width: 412px) {
   .headerCont {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    display: inline-block;
   }
-
-  .headerBtn {
-    display: flex;
-    align-items: center;
+  .headerCont > h2 {
+    display: none;
+  }
+}
+@media (max-width: 390px) {
+  .headerCont {
+    display: inline-block;
+  }
+  .headerCont > h2 {
+    display: none;
   }
 }

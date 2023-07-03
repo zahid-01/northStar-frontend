@@ -10,7 +10,7 @@ const FooterPart = () => {
   return (
     <>
       <div className={classes.FooterCont}>
-        <img alt="Logo" src={logo} />
+        <img alt="Logo" src={logo} className={classes.logo} />
         <div className={classes.FooterAdd}>
           <h6>Address</h6>
           <p className={classes.footAdd}>

@@ -37,3 +37,32 @@ a {
 
   background: #e3e3e3;
 }
+
+/* *****MEDIA QUERIES***** */
+
+@media (max-width: 390px) {
+  .FooterCont {
+    display: grid;
+    gap: 18px;
+    justify-items: center;
+  }
+  .copy {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+  }
+}
+@media (max-width: 412px) {
+  .FooterCont {
+    display: grid;
+    gap: 18px;
+    justify-items: center;
+  }
+  .copy {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+  }
+}

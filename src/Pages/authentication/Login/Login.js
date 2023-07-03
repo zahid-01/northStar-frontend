@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { loginSliceActions } from "../../../Store/loginSlice";
 import { URL } from "../../../Assets/environment/url";
-
+import { Suspense } from "react";
 import classes from "./Login.module.css";
 
 const Login = () => {
@@ -72,6 +72,15 @@ const Login = () => {
 
   return (
     <>
+      <Suspense
+        fallback={
+          <div className={classes.container}>
+            <div className={classes.loaderContainer}>
+              <div className={classes.spinner}></div>
+            </div>
+          </div>
+        }
+      ></Suspense>
       <div className={classes.mainDiv}>
         <div className={classes.container}>
           <h3 className="logo-3">Login</h3>

@@ -77,13 +77,63 @@ h3 {
 }
 .btn:hover {
   background: #7950f2;
-  color: #fff;
+  color: #000;
 }
 
+.container {
+  /* height: 100vh; */
+}
+.loaderContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+
+  z-index: 1;
+}
+
+.spinner {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #3d5af1 transparent #3d5af1 transparent;
+  border-radius: 50%;
+  animation: spin-anim 1.2s linear infinite;
+}
+
+@keyframes spin-anim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* *******MEDIA QUERIES******** */
 @media (max-width: 390px) {
   .eye {
     position: absolute;
     left: 75%;
-    top: 59%;
+    top: 50%;
+  }
+  .container {
+    height: 100vh;
+  }
+}
+@media (max-width: 412px) {
+  .eye {
+    position: absolute;
+    left: 75%;
+    top: 52%;
+  }
+}
+@media (max-width: 768px) {
+  .eye {
+    position: absolute;
+    left: 75%;
+    top: 56%;
   }
 }
