@@ -112,6 +112,10 @@ h3 {
   }
 }
 .eye {
+  position: absolute;
+  top: auto;
+  cursor: pointer;
+  /* left: auto; */
 }
 
 /* *******MEDIA QUERIES******** */
@@ -122,7 +126,7 @@ h3 {
   }
   .eye {
     position: absolute;
-    left: 50%;
+    left: auto;
     top: auto;
   }
 }
@@ -133,7 +137,7 @@ h3 {
   }
   .eye {
     position: absolute;
-    left: 75%;
-    top: 45%;
+    left: auto;
+    top: auto;
   }
 }
