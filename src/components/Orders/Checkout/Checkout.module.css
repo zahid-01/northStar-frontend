@@ -177,7 +177,7 @@ button:hover {
   background-color: #0056b3;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 59em) {
   .deliveryDetail {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -245,7 +245,7 @@ button:hover {
     font-size: 12px;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 34em) {
   .deliveryDetail {
     display: flex;
     flex-direction: column;
@@ -282,7 +282,7 @@ button:hover {
     justify-content: space-around;
     font-size: 12px;
   }
-  @media (max-width: 290px) {
+  @media (max-width: 34em) {
     .deliveryDetail {
       display: flex;
       flex-direction: column;

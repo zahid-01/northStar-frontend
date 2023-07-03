@@ -51,15 +51,8 @@ img {
   background-color: #000;
   margin-right: 5px;
 }
-@media (max-width: 412px) {
-  .headerCont {
-    display: inline-block;
-  }
-  .headerCont > h2 {
-    display: none;
-  }
-}
-@media (max-width: 390px) {
+
+@media (max-width: 34em) {
   .headerCont {
     display: inline-block;
   }
