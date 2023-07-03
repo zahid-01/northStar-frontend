@@ -91,6 +91,10 @@ form ::placeholder {
     flex-direction: column;
     gap: 21px;
   }
+  .mainDiv1 {
+    height: auto;
+  }
+
   .signup input[type="text"],
   .signup input[type="email"],
   .signup input[type="password"],
@@ -99,7 +103,7 @@ form ::placeholder {
   }
   .eye {
     position: absolute;
-    left: 350px;
+    left: 45%;
   }
 }
 @media (max-width: 34em) {
@@ -114,7 +118,7 @@ form ::placeholder {
   .eye {
     position: absolute;
     left: 69%;
-    top: 54%;
+    top: 43%;
   }
 
   .signup > div {

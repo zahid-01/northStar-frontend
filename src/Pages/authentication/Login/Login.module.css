@@ -114,20 +114,23 @@ h3 {
 
 /* *******MEDIA QUERIES******** */
 @media (max-width: 34em) {
+  .mainDiv {
+    height: auto;
+  }
   .eye {
     position: absolute;
-    left: 75%;
-    top: 40%;
-  }
-  .container {
-    height: 100vh;
+    left: 50%;
+    top: auto;
   }
 }
 
 @media (max-width: 59em) {
+  .mainDiv {
+    height: auto;
+  }
   .eye {
     position: absolute;
     left: 75%;
-    top: 56%;
+    top: 84%;
   }
 }
