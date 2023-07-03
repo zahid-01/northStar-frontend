@@ -1,7 +1,6 @@
 import { useLocation } from "react-router-dom";
 
 import classes from "./Checkout.module.css";
-import img from "../../../Assets/Imgs/p3.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 function Checkout() {
