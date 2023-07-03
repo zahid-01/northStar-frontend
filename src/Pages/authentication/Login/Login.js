@@ -91,13 +91,13 @@ const Login = () => {
                 <FontAwesomeIcon
                   icon={faEye}
                   onClick={togglePasswordVisibility}
-                  style={{ cursor: "pointer" }}
+                  className={classes.eye}
                 />
               ) : (
                 <FontAwesomeIcon
                   icon={faEyeSlash}
                   onClick={togglePasswordVisibility}
-                  style={{ cursor: "pointer" }}
+                  className={classes.eye}
                 />
               )}
             </div>

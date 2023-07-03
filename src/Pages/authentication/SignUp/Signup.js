@@ -16,6 +16,7 @@ const Signup = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -35,6 +36,10 @@ const Signup = () => {
     setPassword(passwordInput);
   };
 
+  const confirmPasswordChangeHandler = (e) => {
+    const confirmPasswordInput = e.target.value;
+    setConfirmPassword(confirmPasswordInput);
+  };
   const phoneChangeHandler = (e) => {
     const phoneInput = e.target.value;
     setPhone(phoneInput);
@@ -48,10 +53,32 @@ const Signup = () => {
   const togglePasswordVisibility = () => {
     setShowPassword((prevState) => !prevState);
   };
+  const validatePassword = (password) => {
+    return password.length >= 7;
+  };
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    return emailRegex.test(email);
+  };
+
   const submitHandler = async (e) => {
     e.preventDefault();
 
     if (!name || !email || !password || !phone || !address) return;
+    if (!validatePassword(password)) {
+      alert("Password should be at least 7 digit ");
+      return;
+    }
+    if (!validateEmail(email)) {
+      alert("Please enter a valid email address");
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      alert("Passwords do not match");
+      return;
+    }
 
     const res = await axios({
       method: "POST",
@@ -102,23 +129,28 @@ const Signup = () => {
                 placeholder="Enter Password"
                 onChange={passwordChangeHandler}
               />
+
               {showPassword ? (
                 <FontAwesomeIcon
                   icon={faEye}
                   onClick={togglePasswordVisibility}
-                  style={{ cursor: "pointer" }}
+                  className={classes.eye}
                 />
               ) : (
                 <FontAwesomeIcon
                   icon={faEyeSlash}
                   onClick={togglePasswordVisibility}
-                  style={{ cursor: "pointer" }}
+                  className={classes.eye}
                 />
               )}
             </div>
             <div className={`${classes.userPassword}`}>
               <label>Confirm:</label>
-              <input type="password" placeholder="Confirm Password"></input>
+              <input
+                type="password"
+                placeholder="Confirm Password"
+                onChange={confirmPasswordChangeHandler}
+              ></input>
             </div>
             <div className={`${classes.usernumber}`}>
               <label>Phone:</label>

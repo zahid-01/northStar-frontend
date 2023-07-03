@@ -75,7 +75,10 @@ form ::placeholder {
 .error {
   border: 2px solid red;
 }
-
+.eye {
+  position: absolute;
+  left: 87%;
+}
 /* ******media queries********** */
 @media (max-width: 768px) {
   .signup {
@@ -93,6 +96,10 @@ form ::placeholder {
   .signup input[type="password"],
   .signup input[type="number"] {
     width: 90%;
+  }
+  .eye {
+    position: absolute;
+    left: 350px;
   }
 }
 @media (max-width: 390px) {
@@ -144,5 +151,10 @@ form ::placeholder {
   .signup input[type="password"],
   .signup input[type="number"] {
     width: 70%;
+  }
+  .eye {
+    position: absolute;
+    left: 69%;
+    top: 65%;
   }
 }

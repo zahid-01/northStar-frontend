@@ -16,9 +16,9 @@ const ProductCard = ({ products }) => {
           alt="product img"
         />
         <div className={classes.productBio}>
-          <p>{el.productName}</p>
-          <p>&#8377; {el.productPrice}</p>
-          <p>{el.productDescription}</p>
+          <p className={classes.pName}>{el.productName}</p>
+          <p className={classes.pPrice}>&#8377;{el.productPrice}</p>
+          <p className={classes.pDes}>{el.productDescription}</p>
         </div>
       </NavLink>
     );
