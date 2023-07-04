@@ -8,13 +8,19 @@ const InventoryPage = () => {
       <h1>UPDATE Inventory</h1>
       <ul className={classes.list}>
         <li>
-          <NavLink to="/addProduct">Add Product</NavLink>
+          <NavLink to="/addProduct" className={classes.inventoryBtn}>
+            Add Product
+          </NavLink>
         </li>
         <li>
-          <NavLink to="deleteProduct">Delete Product</NavLink>
+          <NavLink to="deleteProduct" className={classes.inventoryBtn}>
+            Delete Product
+          </NavLink>
         </li>
         <li>
-          <NavLink to="editProduct">Edit a product</NavLink>
+          <NavLink to="editProduct" className={classes.inventoryBtn}>
+            Edit a product
+          </NavLink>
         </li>
       </ul>
     </div>

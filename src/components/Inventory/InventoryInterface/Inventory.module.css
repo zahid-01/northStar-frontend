@@ -23,11 +23,15 @@
   border: 1px solid #000;
   padding: 8px 16px;
   border-radius: 8px;
-  transition: all 0.3s;
+  transition: all 0.5s ease-in;
   width: 100%;
 }
 .list li:hover {
-  background: #7650fa;
+  box-shadow: inset -10em 0 0 0 #000, inset 10em 0 0 0 #000;
+  background: #fff;
+}
+.inventoryBtn:hover {
+  color: #fff;
 }
 h1 {
   background: #e6e3e3;

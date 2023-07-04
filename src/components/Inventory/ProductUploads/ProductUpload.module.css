@@ -49,7 +49,7 @@
   border: 1px solid #000;
   width: 100%;
   padding: 8px;
-  /* border: 1px solid #ccc; */
+
   border-radius: 7px;
   font-size: 14px;
 }
@@ -66,15 +66,16 @@
 
 .button {
   padding: 8px 16px;
-
-  color: #fff;
-  border: 1px solid #fff;
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
   border-radius: 8px;
   font-size: 14px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.4s ease-in;
 }
 
 .button:hover {
-  background-color: #7950f2;
+  box-shadow: inset -10em 0 0 0 #000, inset 10em 0 0 0 #000;
+  color: #fff;
 }
