@@ -10,7 +10,6 @@ const OrderCard = ({ orderItem }) => {
           <p>{orderItem.productName}</p>
           <p>&#8377;{orderItem.productPrice}</p>
           <p>Ordered on: {new Date().toLocaleDateString()}</p>
-          {/* <p> Status</p> */}
         </div>
       </div>
     </>

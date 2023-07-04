@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useState } from "react";
 // import { useSelector } from "react-redux";
 import axios from "axios";
-
+import classes from "./MyOrders.module.css";
 import { URL } from "../../../Assets/environment/url";
 import OrderCard from "../OrderCard/OrderCard";
 
@@ -25,7 +25,7 @@ const MyOrders = () => {
 
   return (
     <Fragment>
-      <h2>My Orders</h2>
+      <h2 className={classes.orderHeader}>My Orders</h2>
       <ul>
         {myOrders.map((el) => (
           <li key={el._id}>
