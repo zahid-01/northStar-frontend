@@ -1,8 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair:wght@300;400;500;700&display=swap");
 body {
   background: rgb(2, 0, 36);
   text-align: center;
-
   color: #000;
 }
 .container {
@@ -10,7 +8,7 @@ body {
   padding: 18px 20px 48px 20px;
   margin: auto;
   background: rgb(227, 230, 230);
-  width: 80%;
+  width: auto;
 }
 .mainDiv1 {
   height: 80vh;
@@ -34,7 +32,6 @@ h3 {
 
 .btn {
   border: 1px solid #000;
-
   padding: 12px 24px;
   font-size: 16px;
   font-weight: 700;
@@ -77,7 +74,7 @@ form ::placeholder {
 }
 .eye {
   position: absolute;
-  left: 87%;
+  left: 91%;
 }
 /* ******media queries********** */
 @media (max-width: 59em) {
