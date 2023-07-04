@@ -1,4 +1,4 @@
-.header {
+/* .header {
   font-size: 21px;
   margin: 28px;
   border: black;
@@ -25,6 +25,37 @@
   color: #000;
   font-size: 24px;
   font-weight: 400;
+} */
+.header {
+  font-size: 21px;
+  margin: 28px;
+  border: black;
+  padding: 8px;
+  border-radius: 11px;
+  background: #e3e6e6;
+}
+.headerCont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerBtn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.user {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+  text-decoration: underline;
 }
 .btn:hover {
   cursor: pointer;
@@ -42,6 +73,12 @@
 
 img {
   height: 50px;
+}
+.user {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+  text-decoration: underline;
 }
 
 /* ******MEDIA QUERIES****** */
