@@ -19,7 +19,7 @@ const Navbar = () => {
       url: `${URL}user/logout`,
     })
       .then((res) => {
-        if (res.statusText === "OK") {
+        if (res.data.status === "Success") {
           dispatch(loginSliceActions.setLogin(false));
           dispatch(loginSliceActions.setUserInfo(null));
         }
@@ -43,9 +43,11 @@ const Navbar = () => {
         <div className={classes.headerBtn}>
           {isLoggedIn && (
             <>
-              <NavLink className={classes.btn} to="inventory">
-                Inventory
-              </NavLink>
+              {userInfo.role === "ns-admin" && (
+                <NavLink className={classes.btn} to="inventory">
+                  Inventory
+                </NavLink>
+              )}
               <NavLink className={classes.btn} to="myOrders">
                 My Orders
               </NavLink>
