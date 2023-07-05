@@ -2,7 +2,8 @@ import { useLoaderData, defer, Await } from "react-router-dom";
 import { Suspense } from "react";
 
 import classes from "./LandingPage.module.css";
-
+import Carousel from "../Header/Carousel";
+import { SliderData } from "../Header/SliderData";
 import Filter from "./Filter";
 import axios from "axios";
 
@@ -22,6 +23,7 @@ const LandingPage = () => {
         </div>
       }
     >
+      <Carousel slides={SliderData} />
       <Filter />
       <div className={classes.landingCont}>
         <div className={classes.productsCont}>
