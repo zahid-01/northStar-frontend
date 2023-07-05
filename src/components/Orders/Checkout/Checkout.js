@@ -91,7 +91,7 @@ const Checkout = () => {
         <div className={classes.options}>
           <h2>Select payment Mode:</h2>
           <div className={classes.select}>
-            <input type="radio" name="paymentMode" checked />
+            <input type="radio" name="paymentMode" />
             <span>UPI</span>
             <input type="radio" name="paymentMode" />
             <span>Credit or debit Card</span>
