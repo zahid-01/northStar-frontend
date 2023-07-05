@@ -1,11 +1,15 @@
 import { useLocation } from "react-router-dom";
 
+import axios from "axios";
+import { URL } from "../../../Assets/environment/url";
+
 import classes from "./Checkout.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-function Checkout() {
+
+const Checkout = () => {
   const { state: product } = useLocation();
-  const subtotal = 100;
+  const subtotal = product.productPrice;
   const discount = 10;
   const shipping = 100;
   const taxPercentage = 0.18;
@@ -15,6 +19,18 @@ function Checkout() {
     (subtotal - calculatedDiscount + shipping) * taxPercentage;
   const calculatedTotal =
     subtotal - calculatedDiscount + shipping + calculatedTax;
+
+  function checkOutHandler() {
+    axios({
+      method: "GET",
+      url: `${URL}orders/get-checkout-session/${this}`,
+    })
+      .then((res) => {
+        console.log(res.data.session.url);
+        window.location.replace(res.data.session.url);
+      })
+      .catch((e) => console.log(e));
+  }
 
   return (
     <>
@@ -83,7 +99,7 @@ function Checkout() {
             <span>Net Banking</span>
           </div>
           <div className={classes.payBtn}>
-            <button>
+            <button onClick={checkOutHandler.bind(product._id)}>
               Place Order
               <FontAwesomeIcon
                 icon={faArrowRight}
@@ -95,6 +111,6 @@ function Checkout() {
       </div>
     </>
   );
-}
+};
 
 export default Checkout;
