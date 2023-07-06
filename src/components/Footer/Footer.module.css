@@ -28,6 +28,9 @@ a {
   font-size: 18px;
 }
 
+.links:hover {
+  text-decoration: underline;
+}
 .copy {
   display: flex;
   justify-content: space-between;

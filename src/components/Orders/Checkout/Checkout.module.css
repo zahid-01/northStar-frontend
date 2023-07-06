@@ -151,6 +151,7 @@ span {
 
 input[type="radio"] {
   margin-right: 10px;
+  cursor: pointer;
 }
 
 span {
