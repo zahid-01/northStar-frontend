@@ -31,8 +31,8 @@ const Carousel = ({ slides }) => {
             className={index === current ? classes.slideAct : classes.slide}
             key={index}
             style={{
-              transform: `translateY(${index + current}00%)`,
-              transition: "transform 2s ease-in",
+              transform: `translateY(-${(index - current) * 100}%)`,
+              transition: "transform 1.5s ease-in-out",
             }}
           >
             {index === current && (
