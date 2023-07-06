@@ -30,6 +30,10 @@ const Carousel = ({ slides }) => {
           <div
             className={index === current ? classes.slideAct : classes.slide}
             key={index}
+            style={{
+              transform: `translateY(${index + current}00%)`,
+              transition: "transform 2s ease-in",
+            }}
           >
             {index === current && (
               <img
