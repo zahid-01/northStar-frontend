@@ -4,13 +4,14 @@ import classes from "./Carousel.module.css";
 import { SliderData } from "./SliderData";
 const Carousel = ({ slides }) => {
   const [current, setCurrent] = useState(0);
+
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
     }, 3000);
 
     return () => clearInterval(interval);
-  }, []);
+  });
   const length = slides.length;
 
   const nextSlide = () => {
