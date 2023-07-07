@@ -6,7 +6,7 @@ import Carousel from "../Header/Carousel";
 import { SliderData } from "../Header/SliderData";
 import Filter from "./Filter";
 import axios from "axios";
-
+import Testimonial from "./Testimonial";
 import { URL } from "../../Assets/environment/url";
 import ProductCard from "../ProductCard/ProductCard";
 
@@ -32,6 +32,7 @@ const LandingPage = () => {
           </Await>
         </div>
       </div>
+      <Testimonial />
     </Suspense>
   );
 };
