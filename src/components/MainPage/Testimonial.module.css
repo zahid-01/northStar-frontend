@@ -36,6 +36,7 @@
 .testimonialText {
   margin-top: 10px;
   font-weight: 400;
+  /* column-count: 2; */
 }
 .name {
   text-transform: uppercase;
@@ -50,4 +51,12 @@
 
   color: #fff;
   margin-bottom: 10px;
+}
+
+/* *********MEDIA QUERIES************ */
+
+@media (max-width: 34em) {
+  .testimonialText {
+    font-size: 10px;
+  }
 }
