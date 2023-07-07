@@ -54,9 +54,3 @@
 }
 
 /* *********MEDIA QUERIES************ */
-
-@media (max-width: 34em) {
-  .testimonialText {
-    font-size: 10px;
-  }
-}
