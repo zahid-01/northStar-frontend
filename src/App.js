@@ -17,7 +17,7 @@ import Checkout from "./components/Orders/Checkout/Checkout";
 import { tokenLoader } from "./Utilities/tokenLoader";
 import { URL } from "./Assets/environment/url";
 import { loginSliceActions } from "./Store/loginSlice";
-
+import Testimonial from "./components/MainPage/Testimonial";
 import "./App.css";
 import MainLayout from "./UI/MainLayout";
 
@@ -95,6 +95,7 @@ function App() {
   return (
     <>
       <RouterProvider router={router} />
+      <Testimonial />
       <FooterPart />
     </>
   );
