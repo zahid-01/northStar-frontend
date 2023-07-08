@@ -9,6 +9,7 @@ import axios from "axios";
 import Testimonial from "./Testimonial";
 import { URL } from "../../Assets/environment/url";
 import ProductCard from "../ProductCard/ProductCard";
+import ContactForm from "./Contact";
 
 const LandingPage = () => {
   const { product } = useLoaderData();
@@ -33,6 +34,7 @@ const LandingPage = () => {
         </div>
       </div>
       <Testimonial />
+      <ContactForm />
     </Suspense>
   );
 };
