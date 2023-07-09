@@ -26,8 +26,8 @@ const Checkout = () => {
       url: `${URL}orders/get-checkout-session/${this}`,
     })
       .then((res) => {
-        console.log(res.data.session.url);
-        window.location.replace(res.data.session.url);
+        console.log(res.data.url);
+        window.location.replace(res.data.url);
       })
       .catch((e) => console.log(e));
   }
