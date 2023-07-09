@@ -12,6 +12,7 @@ const ContactForm = () => {
 
     console.log("Name:", name);
     console.log("Email:", email);
+    console.log("Number:", number);
     console.log("Message:", message);
 
     setShowPopup(true);

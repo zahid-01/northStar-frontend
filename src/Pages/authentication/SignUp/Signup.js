@@ -111,6 +111,7 @@ const Signup = () => {
                 type="text"
                 placeholder="Enter Your Name"
                 onChange={nameChangeHandler}
+                required
               ></input>
             </div>
             <div className={classes.userEmail}>
@@ -119,6 +120,7 @@ const Signup = () => {
                 type="email"
                 placeholder="Enter Your Email"
                 onChange={emailChangeHandler}
+                required
               ></input>
             </div>
             <div className={`${classes.userPassword} ${classes.userPass1}`}>
@@ -128,6 +130,7 @@ const Signup = () => {
                 type={showPassword ? "text" : "password"}
                 placeholder="Enter Password"
                 onChange={passwordChangeHandler}
+                required
               />
 
               {showPassword ? (
@@ -150,6 +153,7 @@ const Signup = () => {
                 type="password"
                 placeholder="Confirm Password"
                 onChange={confirmPasswordChangeHandler}
+                required
               ></input>
             </div>
             <div className={`${classes.usernumber}`}>
@@ -158,6 +162,7 @@ const Signup = () => {
                 type="number"
                 placeholder="Enter Phone No"
                 onChange={phoneChangeHandler}
+                required
               ></input>
             </div>
             <div className={`${classes.useraddress}`}>
@@ -166,6 +171,7 @@ const Signup = () => {
                 type="text"
                 placeholder="Enter Address"
                 onChange={addressChangeHandler}
+                required
               ></input>
             </div>
           </form>
