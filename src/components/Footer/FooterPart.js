@@ -20,12 +20,20 @@ const FooterPart = () => {
           </p>
           <p className={classes.footAdd}>J&K 190001</p>
           <a className={classes.links} href="tel:9797979797">
-            <FontAwesomeIcon icon={faPhone} style={{ fontSize: "12px" }} />
+            <FontAwesomeIcon
+              icon={faPhone}
+              beat
+              style={{ fontSize: "14px", marginRight: "5px" }}
+            />
             9797979797
           </a>
           <a className={classes.links} href="mailto:northstar@gmail.com">
-            <FontAwesomeIcon icon={faEnvelope} />
-            northstar@gmail.com
+            <FontAwesomeIcon
+              icon={faEnvelope}
+              beat
+              style={{ marginRight: "5px" }}
+            />
+            Northstar@gmail.com
           </a>
         </div>
         <div className={classes.FooterDet}>
