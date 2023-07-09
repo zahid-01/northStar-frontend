@@ -65,7 +65,10 @@ const Signup = () => {
   const submitHandler = async (e) => {
     e.preventDefault();
 
-    if (!name || !email || !password || !phone || !address) return;
+    if (!name || !email || !password || !phone || !address) {
+      alert("Please Fill the fields");
+      return;
+    }
     if (!validatePassword(password)) {
       alert("Password should be at least 7 digit ");
       return;
