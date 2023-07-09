@@ -16,7 +16,8 @@ const FooterPart = () => {
         <div className={classes.FooterAdd}>
           <h6>Address</h6>
           <p className={classes.footAdd}>
-            Mir Mall Complex opposite District Police Lines Srinagar
+            Mir Mall Complex opposite
+            <br /> District Police Lines Srinagar
           </p>
           <p className={classes.footAdd}>J&K 190001</p>
           <a className={classes.links} href="tel:9797979797">
