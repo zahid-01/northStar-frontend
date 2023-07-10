@@ -1,22 +1,22 @@
 export const SliderData = [
   {
     image:
-      "https://images.unsplash.com/photo-1546768292-fb12f6c92568?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "https://unsplash.com/photos/Bd7gNnWJBkU/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8M3x8bGFwdG9wfGVufDB8fHx8MTY4ODk5MTMzOXww&force=true",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1501446529957-6226bd447c46?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1489&q=80",
+      "https://unsplash.com/photos/5AoOejjRUrA/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mnx8cHJpbnRlcnxlbnwwfHx8fDE2ODg5ODIxNjJ8MA&force=true",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80",
+      "https://unsplash.com/photos/Hpaq-kBcYHk/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8OXx8cGN8ZW58MHx8fHwxNjg4OTcyNzE1fDA&force=true",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1475189778702-5ec9941484ae?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1351&q=80",
+      "https://unsplash.com/photos/wtRE0XpHkBQ/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8M3x8YWxsJTIwaW4lMjBvbmV8ZW58MHx8fHwxNjg4OTU2NDUxfDA&force=true",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80",
+      "https://unsplash.com/photos/RDolnHtjVCY/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Nnx8bGFwdG9wJTIwY29tcHV0ZXJ8ZW58MHx8fHwxNjg4OTgzMzI1fDA&force=true",
   },
 ];
