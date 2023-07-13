@@ -19,7 +19,10 @@ import { URL } from "./Assets/environment/url";
 import { loginSliceActions } from "./Store/loginSlice";
 import "./App.css";
 import MainLayout from "./UI/MainLayout";
+import UICallback from "./Pages/Payment/UICallback/UICallback";
+
 axios.defaults.withCredentials = true;
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -61,6 +64,10 @@ const router = createBrowserRouter([
       {
         path: "/checkout",
         element: <Checkout />,
+      },
+      {
+        path: "/UICallback",
+        element: <UICallback />,
       },
     ],
   },

@@ -89,15 +89,6 @@ const Checkout = () => {
       </div>
       <div className={classes.payment}>
         <div className={classes.options}>
-          <h2>Select payment Mode:</h2>
-          <div className={classes.select}>
-            <input type="radio" name="paymentMode" />
-            <span>UPI</span>
-            <input type="radio" name="paymentMode" />
-            <span>Credit or debit Card</span>
-            <input type="radio" name="paymentMode" />
-            <span>Net Banking</span>
-          </div>
           <div className={classes.payBtn}>
             <button onClick={checkOutHandler.bind(product._id)}>
               Place Order
