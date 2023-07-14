@@ -29,7 +29,7 @@ const MyOrders = () => {
       <ul>
         {myOrders.map((el) => (
           <li key={el._id}>
-            <OrderCard orderItem={el.product} />
+            <OrderCard orderItem={el} />
           </li>
         ))}
       </ul>
