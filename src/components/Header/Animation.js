@@ -31,7 +31,7 @@ const MotionComponent = ({ children }) => {
       ref={motionRef}
       initial={{ x: 100, opacity: 0 }}
       animate={isVisible ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
-      transition={{ duration: 2 }}
+      transition={{ duration: 1 }}
     >
       {children}
     </motion.div>
