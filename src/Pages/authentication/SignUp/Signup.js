@@ -5,7 +5,7 @@ import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { loginSliceActions } from "../../../Store/loginSlice";
-
+import MotionComponent from "../../../components/Header/Animation";
 import classes from "./Signup.module.css";
 import { URL } from "../../../Assets/environment/url";
 
@@ -105,89 +105,91 @@ const Signup = () => {
   return (
     <>
       <div className={classes.mainDiv1}>
-        <div className={classes.container}>
-          <h3 className="logo-3">Sign-up</h3>
-          <form className={classes.signup}>
-            <div className={`${classes.userName} `}>
-              <label>Name:</label>
-              <input
-                type="text"
-                placeholder="Enter Your Name"
-                onChange={nameChangeHandler}
-                required
-              ></input>
-            </div>
-            <div className={classes.userEmail}>
-              <label>Email:</label>
-              <input
-                type="email"
-                placeholder="Enter Your Email"
-                onChange={emailChangeHandler}
-                required
-              ></input>
-            </div>
-            <div className={`${classes.userPassword} ${classes.userPass1}`}>
-              <label>Password:</label>
+        <MotionComponent>
+          <div className={classes.container}>
+            <h3 className="logo-3">Sign-up</h3>
+            <form className={classes.signup}>
+              <div className={`${classes.userName} `}>
+                <label>Name:</label>
+                <input
+                  type="text"
+                  placeholder="Enter Your Name"
+                  onChange={nameChangeHandler}
+                  required
+                ></input>
+              </div>
+              <div className={classes.userEmail}>
+                <label>Email:</label>
+                <input
+                  type="email"
+                  placeholder="Enter Your Email"
+                  onChange={emailChangeHandler}
+                  required
+                ></input>
+              </div>
+              <div className={`${classes.userPassword} ${classes.userPass1}`}>
+                <label>Password:</label>
 
-              <input
-                type={showPassword ? "text" : "password"}
-                placeholder="Enter Password"
-                onChange={passwordChangeHandler}
-                required
-              />
+                <input
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Enter Password"
+                  onChange={passwordChangeHandler}
+                  required
+                />
 
-              {showPassword ? (
-                <FontAwesomeIcon
-                  icon={faEye}
-                  onClick={togglePasswordVisibility}
-                  className={classes.eye}
-                />
-              ) : (
-                <FontAwesomeIcon
-                  icon={faEyeSlash}
-                  onClick={togglePasswordVisibility}
-                  className={classes.eye}
-                />
-              )}
+                {showPassword ? (
+                  <FontAwesomeIcon
+                    icon={faEye}
+                    onClick={togglePasswordVisibility}
+                    className={classes.eye}
+                  />
+                ) : (
+                  <FontAwesomeIcon
+                    icon={faEyeSlash}
+                    onClick={togglePasswordVisibility}
+                    className={classes.eye}
+                  />
+                )}
+              </div>
+              <div className={`${classes.userPassword}`}>
+                <label>Confirm:</label>
+                <input
+                  type="password"
+                  placeholder="Confirm Password"
+                  onChange={confirmPasswordChangeHandler}
+                  required
+                ></input>
+              </div>
+              <div className={`${classes.usernumber}`}>
+                <label>Phone:</label>
+                <input
+                  type="number"
+                  placeholder="Enter Phone No"
+                  onChange={phoneChangeHandler}
+                  required
+                ></input>
+              </div>
+              <div className={`${classes.useraddress}`}>
+                <label>Address:</label>
+                <input
+                  type="text"
+                  placeholder="Enter Address"
+                  onChange={addressChangeHandler}
+                  required
+                ></input>
+              </div>
+            </form>
+            <div className={classes.btnDiv}>
+              <button
+                type="submit"
+                className={classes.btn}
+                onClick={submitHandler}
+              >
+                Sign Up
+              </button>
             </div>
-            <div className={`${classes.userPassword}`}>
-              <label>Confirm:</label>
-              <input
-                type="password"
-                placeholder="Confirm Password"
-                onChange={confirmPasswordChangeHandler}
-                required
-              ></input>
-            </div>
-            <div className={`${classes.usernumber}`}>
-              <label>Phone:</label>
-              <input
-                type="number"
-                placeholder="Enter Phone No"
-                onChange={phoneChangeHandler}
-                required
-              ></input>
-            </div>
-            <div className={`${classes.useraddress}`}>
-              <label>Address:</label>
-              <input
-                type="text"
-                placeholder="Enter Address"
-                onChange={addressChangeHandler}
-                required
-              ></input>
-            </div>
-          </form>
-          <div className={classes.btnDiv}>
-            <button
-              type="submit"
-              className={classes.btn}
-              onClick={submitHandler}
-            >
-              Sign Up
-            </button>
           </div>
-        </div>
+        </MotionComponent>
       </div>
     </>
   );

@@ -8,6 +8,7 @@ import { loginSliceActions } from "../../../Store/loginSlice";
 import { URL } from "../../../Assets/environment/url";
 import { Suspense } from "react";
 import classes from "./Login.module.css";
+import MotionComponent from "../../../components/Header/Animation";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -82,45 +83,47 @@ const Login = () => {
         }
       ></Suspense>
       <div className={classes.mainDiv}>
-        <div className={classes.container}>
-          <h3 className="logo-3">Login</h3>
-          {loginError && <p>{errorMessage}</p>}
-          <form>
-            <div className={classes.user}>
-              <label>Username:</label>
-              <input type="email" onChange={emailChangeHandler}></input>
+        <MotionComponent>
+          <div className={classes.container}>
+            <h3 className="logo-3">Login</h3>
+            {loginError && <p>{errorMessage}</p>}
+            <form>
+              <div className={classes.user}>
+                <label>Username:</label>
+                <input type="email" onChange={emailChangeHandler}></input>
+              </div>
+              <div className={classes.userPass}>
+                <label>Password:</label>
+                <input
+                  type={showPassword ? "text" : "password"}
+                  onChange={passwordChangeHandler}
+                ></input>
+                {showPassword ? (
+                  <FontAwesomeIcon
+                    icon={faEye}
+                    onClick={togglePasswordVisibility}
+                    className={classes.eye}
+                  />
+                ) : (
+                  <FontAwesomeIcon
+                    icon={faEyeSlash}
+                    onClick={togglePasswordVisibility}
+                    className={classes.eye}
+                  />
+                )}
+              </div>
+            </form>
+            <div className={classes.btnDiv}>
+              <button
+                type="submit"
+                className={classes.btn}
+                onClick={loginHandler}
+              >
+                Login
+              </button>
             </div>
-            <div className={classes.userPass}>
-              <label>Password:</label>
-              <input
-                type={showPassword ? "text" : "password"}
-                onChange={passwordChangeHandler}
-              ></input>
-              {showPassword ? (
-                <FontAwesomeIcon
-                  icon={faEye}
-                  onClick={togglePasswordVisibility}
-                  className={classes.eye}
-                />
-              ) : (
-                <FontAwesomeIcon
-                  icon={faEyeSlash}
-                  onClick={togglePasswordVisibility}
-                  className={classes.eye}
-                />
-              )}
-            </div>
-          </form>
-          <div className={classes.btnDiv}>
-            <button
-              type="submit"
-              className={classes.btn}
-              onClick={loginHandler}
-            >
-              Login
-            </button>
           </div>
-        </div>
+        </MotionComponent>
       </div>
     </>
   );
