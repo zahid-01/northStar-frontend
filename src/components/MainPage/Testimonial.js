@@ -5,6 +5,7 @@ import img2 from "../../Assets/Imgs/p2.jpg";
 import img3 from "../../Assets/Imgs/p3.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faKissWinkHeart } from "@fortawesome/free-regular-svg-icons";
+import MotionComponent from "../Header/Animation";
 
 const Testimonial = () => {
   const testimonials = [
@@ -42,35 +43,37 @@ const Testimonial = () => {
 
   return (
     <>
-      <h2 className={styles.testimonialTitle}>Testimonials</h2>
-      <div className={styles.testimonialContainer}>
-        <div
-          className={styles.testimonialSlider}
-          style={{
-            "--testimonial-count": testimonials.length,
-            "--active-testimonial-index": activeTestimonialIndex,
-          }}
-        >
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className={styles.testimonial}>
-              <img
-                src={testimonial.imageSrc}
-                alt={testimonial.altText}
-                className={styles.testimonialImage}
-              />
-
-              <p className={`${styles.testimonialText} ${styles.name}`}>
-                {testimonial.name}
-                <FontAwesomeIcon
-                  icon={faKissWinkHeart}
-                  style={{ marginLeft: "5px" }}
+      <MotionComponent>
+        <h2 className={styles.testimonialTitle}>Testimonials</h2>
+        <div className={styles.testimonialContainer}>
+          <div
+            className={styles.testimonialSlider}
+            style={{
+              "--testimonial-count": testimonials.length,
+              "--active-testimonial-index": activeTestimonialIndex,
+            }}
+          >
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className={styles.testimonial}>
+                <img
+                  src={testimonial.imageSrc}
+                  alt={testimonial.altText}
+                  className={styles.testimonialImage}
                 />
-              </p>
-              <p className={styles.testimonialText}>{testimonial.text}</p>
-            </div>
-          ))}
+
+                <p className={`${styles.testimonialText} ${styles.name}`}>
+                  {testimonial.name}
+                  <FontAwesomeIcon
+                    icon={faKissWinkHeart}
+                    style={{ marginLeft: "5px" }}
+                  />
+                </p>
+                <p className={styles.testimonialText}>{testimonial.text}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      </MotionComponent>
     </>
   );
 };

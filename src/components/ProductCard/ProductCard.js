@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-
 import classes from "./ProductCard.module.css";
 
 const ProductCard = ({ products }) => {

@@ -10,6 +10,7 @@ import Testimonial from "./Testimonial";
 import { URL } from "../../Assets/environment/url";
 import ProductCard from "../ProductCard/ProductCard";
 import ContactForm from "./Contact";
+import MotionComponent from "../Header/Animation";
 
 const LandingPage = () => {
   const { product } = useLoaderData();
@@ -26,13 +27,16 @@ const LandingPage = () => {
     >
       <Carousel slides={SliderData} />
       <Filter />
-      <div className={classes.landingCont}>
-        <div className={classes.productsCont}>
-          <Await resolve={product}>
-            {({ products }) => <ProductCard products={products} />}
-          </Await>
+      <MotionComponent>
+        <div className={classes.landingCont}>
+          <div className={classes.productsCont}>
+            <Await resolve={product}>
+              {({ products }) => <ProductCard products={products} />}
+            </Await>
+          </div>
         </div>
-      </div>
+      </MotionComponent>
+
       <Testimonial />
       <ContactForm />
     </Suspense>

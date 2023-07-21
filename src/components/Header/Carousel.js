@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 import classes from "./Carousel.module.css";
 import { SliderData } from "./SliderData";
 const Carousel = ({ slides }) => {

@@ -6,62 +6,65 @@ import {
   faPhone,
   faHeart,
 } from "@fortawesome/free-solid-svg-icons";
+import MotionComponent from "../Header/Animation";
 const FooterPart = () => {
   return (
     <>
-      <div className={classes.FooterCont}>
-        <a href="/">
-          <img alt="Logo" src={logo} className={classes.logo} />
-        </a>
-        <div className={classes.FooterAdd}>
-          <h6>Address</h6>
+      <MotionComponent>
+        <div className={classes.FooterCont}>
+          <a href="/">
+            <img alt="Logo" src={logo} className={classes.logo} />
+          </a>
+          <div className={classes.FooterAdd}>
+            <h6>Address</h6>
+            <p className={classes.footAdd}>
+              Mir Mall Complex opposite
+              <br /> District Police Lines Srinagar
+            </p>
+            <p className={classes.footAdd}>J&K 190001</p>
+            <a className={classes.links} href="tel:9797979797">
+              <FontAwesomeIcon
+                icon={faPhone}
+                beat
+                style={{ fontSize: "14px", marginRight: "5px" }}
+              />
+              9797979797
+            </a>
+            <a className={classes.links} href="mailto:northstar@gmail.com">
+              <FontAwesomeIcon
+                icon={faEnvelope}
+                beat
+                style={{ marginRight: "5px" }}
+              />
+              Northstar@gmail.com
+            </a>
+          </div>
+          <div className={classes.FooterDet}>
+            <h6>Links</h6>
+            <a className={classes.links} href="privacy">
+              Privacy Policy
+            </a>
+            <a className={classes.links} href="refund">
+              Refund
+            </a>
+            <a className={classes.links} href="terms">
+              Terms & Conditions
+            </a>
+            <a className={classes.links} href="about">
+              About Us
+            </a>
+          </div>
+        </div>
+        <div className={classes.copy}>
           <p className={classes.footAdd}>
-            Mir Mall Complex opposite
-            <br /> District Police Lines Srinagar
+            &copy; Copyright All rights reserved NorthStar
           </p>
-          <p className={classes.footAdd}>J&K 190001</p>
-          <a className={classes.links} href="tel:9797979797">
-            <FontAwesomeIcon
-              icon={faPhone}
-              beat
-              style={{ fontSize: "14px", marginRight: "5px" }}
-            />
-            9797979797
-          </a>
-          <a className={classes.links} href="mailto:northstar@gmail.com">
-            <FontAwesomeIcon
-              icon={faEnvelope}
-              beat
-              style={{ marginRight: "5px" }}
-            />
-            Northstar@gmail.com
+          <a href="developer">
+            Developers Link
+            <FontAwesomeIcon icon={faHeart} />
           </a>
         </div>
-        <div className={classes.FooterDet}>
-          <h6>Links</h6>
-          <a className={classes.links} href="privacy">
-            Privacy Policy
-          </a>
-          <a className={classes.links} href="refund">
-            Refund
-          </a>
-          <a className={classes.links} href="terms">
-            Terms & Conditions
-          </a>
-          <a className={classes.links} href="about">
-            About Us
-          </a>
-        </div>
-      </div>
-      <div className={classes.copy}>
-        <p className={classes.footAdd}>
-          &copy; Copyright All rights reserved NorthStar
-        </p>
-        <a href="developer">
-          Developers Link
-          <FontAwesomeIcon icon={faHeart} />
-        </a>
-      </div>
+      </MotionComponent>
     </>
   );
 };

@@ -6,7 +6,7 @@ import axios from "axios";
 import classes from "./Product.module.css";
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import MotionComponent from "../Header/Animation";
 import { URL } from "../../Assets/environment/url";
 
 const Product = (props) => {
@@ -27,35 +27,37 @@ const Product = (props) => {
   };
   return (
     <>
-      <div className={classes.productCont}>
-        <div className={classes.corousel}>
-          <img
-            src={images[currentImage]}
-            alt={`img ${currentImage + 1}`}
-            className={classes.carouselimage}
-          />
-          <div className={classes.productBtn}>
-            <button onClick={prevImage} className={classes.corouselbutton}>
-              <FontAwesomeIcon icon={faArrowLeft} />
-            </button>
-            <button onClick={nextImage} className={classes.corouselbutton}>
-              <FontAwesomeIcon icon={faArrowRight} />
-            </button>
-          </div>
-        </div>
-        <div className={classes.desCont}>
-          <p className={classes.description}>{product.productDescription}</p>
-          <div className={classes.productPrice}>
-            <p className={classes.price}>&#8377; {product.productPrice}</p>
+      <MotionComponent>
+        <div className={classes.productCont}>
+          <div className={classes.corousel}>
+            <img
+              src={images[currentImage]}
+              alt={`img ${currentImage + 1}`}
+              className={classes.carouselimage}
+            />
             <div className={classes.productBtn}>
-              <button className={classes.btn}>Add to Cart</button>
-              <NavLink className={classes.btn} to="/checkout" state={product}>
-                Buy Now
-              </NavLink>
+              <button onClick={prevImage} className={classes.corouselbutton}>
+                <FontAwesomeIcon icon={faArrowLeft} />
+              </button>
+              <button onClick={nextImage} className={classes.corouselbutton}>
+                <FontAwesomeIcon icon={faArrowRight} />
+              </button>
+            </div>
+          </div>
+          <div className={classes.desCont}>
+            <p className={classes.description}>{product.productDescription}</p>
+            <div className={classes.productPrice}>
+              <p className={classes.price}>&#8377; {product.productPrice}</p>
+              <div className={classes.productBtn}>
+                <button className={classes.btn}>Add to Cart</button>
+                <NavLink className={classes.btn} to="/checkout" state={product}>
+                  Buy Now
+                </NavLink>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </MotionComponent>
     </>
   );
 };

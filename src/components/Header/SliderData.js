@@ -1,22 +1,22 @@
+import img1 from "../../Assets/Imgs/img1.jpg";
+import img2 from "../../Assets/Imgs/img2.jpg";
+import img3 from "../../Assets/Imgs/img3.jpg";
+import img4 from "../../Assets/Imgs/img4.jpg";
+import img5 from "../../Assets/Imgs/img5.jpg";
 export const SliderData = [
   {
-    image:
-      "https://unsplash.com/photos/Bd7gNnWJBkU/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8M3x8bGFwdG9wfGVufDB8fHx8MTY4ODk5MTMzOXww&force=true",
+    image: img1,
   },
   {
-    image:
-      "https://unsplash.com/photos/5AoOejjRUrA/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mnx8cHJpbnRlcnxlbnwwfHx8fDE2ODg5ODIxNjJ8MA&force=true",
+    image: img2,
   },
   {
-    image:
-      "https://unsplash.com/photos/Hpaq-kBcYHk/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8OXx8cGN8ZW58MHx8fHwxNjg4OTcyNzE1fDA&force=true",
+    image: img3,
   },
   {
-    image:
-      "https://unsplash.com/photos/wtRE0XpHkBQ/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8M3x8YWxsJTIwaW4lMjBvbmV8ZW58MHx8fHwxNjg4OTU2NDUxfDA&force=true",
+    image: img4,
   },
   {
-    image:
-      "https://unsplash.com/photos/RDolnHtjVCY/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Nnx8bGFwdG9wJTIwY29tcHV0ZXJ8ZW58MHx8fHwxNjg4OTgzMzI1fDA&force=true",
+    image: img5,
   },
 ];
