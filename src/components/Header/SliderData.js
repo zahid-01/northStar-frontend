@@ -1,8 +1,8 @@
-import img1 from "../../Assets/Imgs/img1.jpg";
-import img2 from "../../Assets/Imgs/img2.jpg";
-import img3 from "../../Assets/Imgs/img3.jpg";
-import img4 from "../../Assets/Imgs/img4.jpg";
-import img5 from "../../Assets/Imgs/img5.jpg";
+import img1 from "../../Assets/Imgs/img1.jpeg";
+import img2 from "../../Assets/Imgs/img2.jpeg";
+import img3 from "../../Assets/Imgs/img3.jpeg";
+import img4 from "../../Assets/Imgs/img4.jpeg";
+import img5 from "../../Assets/Imgs/img5.jpeg";
 export const SliderData = [
   {
     image: img1,

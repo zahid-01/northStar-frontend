@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Testimonial.module.css";
-import img1 from "../../Assets/Imgs/p1.jpg";
-import img2 from "../../Assets/Imgs/p2.jpg";
-import img3 from "../../Assets/Imgs/p3.jpg";
+import img1 from "../../Assets/Imgs/p1.jpeg";
+import img2 from "../../Assets/Imgs/p2.jpeg";
+import img3 from "../../Assets/Imgs/p3.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faKissWinkHeart } from "@fortawesome/free-regular-svg-icons";
 import MotionComponent from "../Header/Animation";
