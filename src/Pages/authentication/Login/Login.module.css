@@ -2,8 +2,8 @@
   border-radius: 8px;
   padding: 18px;
   background: #e3e3e3;
-  margin: auto;
-  height: 70%;
+  margin-top: 30%;
+  height: auto;
   box-shadow: 0 0 18px 0 rgba(255, 255, 255, 0.3);
 }
 .mainDiv {
@@ -113,6 +113,7 @@ h3 {
 @media (max-width: 34em) {
   .mainDiv {
     height: auto;
+
     position: relative;
   }
   .eye {
@@ -125,6 +126,7 @@ h3 {
 @media (max-width: 59em) {
   .mainDiv {
     height: auto;
+    position: relative;
   }
   .eye {
     position: absolute;

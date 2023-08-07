@@ -1,5 +1,5 @@
 import { useLoaderData, defer, Await } from "react-router-dom";
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 
 import classes from "./LandingPage.module.css";
 import Carousel from "../Header/Carousel";
@@ -14,6 +14,11 @@ import MotionComponent from "../Header/Animation";
 
 const LandingPage = () => {
   const { product } = useLoaderData();
+  const [category, setCategory] = useState();
+
+  const categoryDisplay = (category = "monitors") => {
+    setCategory(category);
+  };
 
   return (
     <Suspense
@@ -26,12 +31,14 @@ const LandingPage = () => {
       }
     >
       <Carousel slides={SliderData} />
-      <Filter />
+      <Filter filter={categoryDisplay} />
       <MotionComponent>
         <div className={classes.landingCont}>
           <div className={classes.productsCont}>
             <Await resolve={product}>
-              {({ products }) => <ProductCard products={products} />}
+              {({ products }) => (
+                <ProductCard products={products} filterValue={category} />
+              )}
             </Await>
           </div>
         </div>

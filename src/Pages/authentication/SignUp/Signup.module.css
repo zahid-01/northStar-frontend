@@ -6,9 +6,10 @@ body {
 .container {
   border-radius: 8px;
   padding: 18px 20px 48px 20px;
-  margin: auto;
+  margin: 10%;
   background: rgb(227, 230, 230);
   width: auto;
+  height: auto;
 }
 .mainDiv1 {
   height: 80vh;
