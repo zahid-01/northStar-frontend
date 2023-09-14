@@ -1,7 +1,5 @@
 import { useLoaderData, defer, Await } from "react-router-dom";
 import { Suspense, useState } from "react";
-
-import classes from "./LandingPage.module.css";
 import Carousel from "../Header/Carousel";
 import { SliderData } from "../Header/SliderData";
 import Filter from "./Filter";
@@ -11,6 +9,7 @@ import { URL } from "../../Assets/environment/url";
 import ProductCard from "../ProductCard/ProductCard";
 import ContactForm from "./Contact";
 import MotionComponent from "../Header/Animation";
+import NewsletterSection from "./Subscribe";
 
 const LandingPage = () => {
   const { product } = useLoaderData();
@@ -23,18 +22,16 @@ const LandingPage = () => {
   return (
     <Suspense
       fallback={
-        <div className={classes.container}>
-          <div className={classes.loaderContainer}>
-            <div className={classes.spinner}></div>
-          </div>
+        <div className="flex justify-center items-center min-h-screen">
+          <div className="loader"></div>
         </div>
       }
     >
       <Carousel slides={SliderData} />
       <Filter filter={categoryDisplay} />
       <MotionComponent>
-        <div className={classes.landingCont}>
-          <div className={classes.productsCont}>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 border-b-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             <Await resolve={product}>
               {({ products }) => (
                 <ProductCard products={products} filterValue={category} />
@@ -43,12 +40,13 @@ const LandingPage = () => {
           </div>
         </div>
       </MotionComponent>
-
       <Testimonial />
+      <NewsletterSection />
       <ContactForm />
     </Suspense>
   );
 };
+
 export default LandingPage;
 
 const loadProducts = async () => {

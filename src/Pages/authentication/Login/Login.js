@@ -6,8 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { loginSliceActions } from "../../../Store/loginSlice";
 import { URL } from "../../../Assets/environment/url";
-import { Suspense } from "react";
-import classes from "./Login.module.css";
+import img from "../../../Assets/Imgs/796994.png";
 import MotionComponent from "../../../components/Header/Animation";
 
 const Login = () => {
@@ -28,6 +27,7 @@ const Login = () => {
   const passwordChangeHandler = (e) => {
     setPassword(e.target.value);
   };
+
   const togglePasswordVisibility = () => {
     setShowPassword((prevState) => !prevState);
   };
@@ -72,60 +72,73 @@ const Login = () => {
   };
 
   return (
-    <>
-      <Suspense
-        fallback={
-          <div className={classes.container}>
-            <div className={classes.loaderContainer}>
-              <div className={classes.spinner}></div>
-            </div>
+    <div className="h-screen flex items-center justify-center bg-gradient-to-t from-blue-500 to-white ">
+      <MotionComponent>
+        <div className="bg-white rounded-lg shadow-md p-6 sm:w-96 w-full">
+          <div className="text-center">
+            <img src={img} alt="NorthStar Logo" className="w-32 mx-auto mb-6" />
+            <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+              Sign-In
+            </h3>
+            {loginError && (
+              <p className="text-red-500 text-sm mb-4">{errorMessage}</p>
+            )}
           </div>
-        }
-      ></Suspense>
-      <div className={classes.mainDiv}>
-        <MotionComponent>
-          <div className={classes.container}>
-            <h3 className="logo-3">Login</h3>
-            {loginError && <p>{errorMessage}</p>}
-            <form>
-              <div className={classes.user}>
-                <label>Username:</label>
-                <input type="email" onChange={emailChangeHandler}></input>
-              </div>
-              <div className={classes.userPass}>
-                <label>Password:</label>
+          <form>
+            <div className="mb-4">
+              <label htmlFor="email" className="block text-sm font-medium">
+                Email:
+              </label>
+              <input
+                type="email"
+                id="email"
+                className="border border-gray-300 rounded-md p-2 w-full focus:ring focus:ring-blue-500"
+                placeholder="Your Email"
+                onChange={emailChangeHandler}
+              />
+            </div>
+            <div className="mb-4">
+              <label htmlFor="password" className="block text-sm font-medium">
+                Password:
+              </label>
+              <div className="relative">
                 <input
                   type={showPassword ? "text" : "password"}
+                  id="password"
+                  className="border border-gray-300 rounded-md p-2 w-full focus:ring focus:ring-blue-500"
+                  placeholder="Your Password"
                   onChange={passwordChangeHandler}
-                ></input>
-                {showPassword ? (
-                  <FontAwesomeIcon
-                    icon={faEye}
-                    onClick={togglePasswordVisibility}
-                    className={classes.eye}
-                  />
-                ) : (
-                  <FontAwesomeIcon
-                    icon={faEyeSlash}
-                    onClick={togglePasswordVisibility}
-                    className={classes.eye}
-                  />
-                )}
+                />
+                <span
+                  onClick={togglePasswordVisibility}
+                  className="absolute inset-y-0 right-0 flex items-center pr-2 cursor-pointer"
+                >
+                  {showPassword ? (
+                    <FontAwesomeIcon icon={faEyeSlash} />
+                  ) : (
+                    <FontAwesomeIcon icon={faEye} />
+                  )}
+                </span>
               </div>
-            </form>
-            <div className={classes.btnDiv}>
+            </div>
+            <div className="mt-4">
               <button
                 type="submit"
-                className={classes.btn}
+                className="bg-amazon-orange text-white py-2 px-4 rounded-md hover:bg-amazon-dark-orange w-full"
                 onClick={loginHandler}
               >
-                Login
+                Sign-In
               </button>
             </div>
-          </div>
-        </MotionComponent>
-      </div>
-    </>
+            <p className="text-center mt-4 text-gray-600 text-sm">
+              Don't have an account?{" "}
+              <a href="www.jknorthstar.com">Create one here</a>
+            </p>
+          </form>
+        </div>
+      </MotionComponent>
+    </div>
   );
 };
+
 export default Login;

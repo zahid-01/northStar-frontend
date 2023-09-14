@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import axios from "axios";
-
 import Login from "./Pages/authentication/Login/Login";
 import Signup from "./Pages/authentication/SignUp/Signup";
 import LandingPage, { fetchProducts } from "./components/MainPage/LandingPage";
@@ -17,7 +16,6 @@ import Checkout from "./components/Orders/Checkout/Checkout";
 import { tokenLoader } from "./Utilities/tokenLoader";
 import { URL } from "./Assets/environment/url";
 import { loginSliceActions } from "./Store/loginSlice";
-import "./App.css";
 import MainLayout from "./UI/MainLayout";
 import UICallback from "./Pages/Payment/UICallback/UICallback";
 

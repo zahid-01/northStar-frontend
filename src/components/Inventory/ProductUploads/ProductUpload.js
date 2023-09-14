@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import classes from "./ProductUpload.module.css";
 import axios from "axios";
-
 import { URL } from "../../../Assets/environment/url";
 
 const ProductUpload = () => {
@@ -10,6 +8,8 @@ const ProductUpload = () => {
   const [productDescription, setProductDescription] = useState("");
   const [productCode, setProductCode] = useState("");
   const [images, setProductImages] = useState([]);
+  const [productCategory, setProductCategory] = useState("monitors");
+  const [productBrand, setProductBrand] = useState("");
   const [statusMessage, setStatusMessage] = useState("");
 
   const handleProductUpload = async (e) => {
@@ -20,6 +20,8 @@ const ProductUpload = () => {
     form.append("productPrice", productPrice);
     form.append("productDescription", productDescription);
     form.append("productCode", productCode);
+    form.append("productCategory", productCategory);
+    form.append("productBrand", productBrand);
     for (let i = 0; i < images.length && i < 3; i++) {
       form.append("images", images[i]);
     }
@@ -30,7 +32,6 @@ const ProductUpload = () => {
       data: form,
       headers: { "Content-Type": "multipart/form-data" },
     }).catch((e) => console.log(e));
-    console.log(res);
 
     if (res.statusText === "OK") {
       setStatusMessage("Added product successfully");
@@ -50,83 +51,93 @@ const ProductUpload = () => {
   };
 
   return (
-    <div className={classes.productUpload}>
-      <h1 className={classes.title}>Product Upload</h1>
-      <p>{statusMessage}</p>
-      <form className={classes.form} onSubmit={handleProductUpload}>
-        <div className={classes.formGroup}>
-          <label className={classes.label}>Product Name:</label>
+    <div className="bg-gray-100 p-4 sm:p-6 md:p-8 lg:p-10">
+      <h1 className="text-2xl text-center sm:text-3xl md:text-4xl lg:text-5xl mb-4">
+        Product Upload
+      </h1>
+      <p className="text-red-500">{statusMessage}</p>
+      <form className="text-gray-800" onSubmit={handleProductUpload}>
+        <div className="mb-4">
+          <label className="block mb-1">Product Name:</label>
           <input
             type="text"
             value={productName}
             onChange={(e) => setProductName(e.target.value)}
-            className={classes.input}
+            className="bg-white text-gray-800 border border-gray-300 rounded py-2 px-3 w-full"
           />
         </div>
-        <div className={classes.formGroup}>
-          <label className={classes.label}>Product Code:</label>
+        <div className="mb-4">
+          <label className="block mb-1">Product Code:</label>
           <input
             type="text"
             value={productCode}
             onChange={(e) => setProductCode(e.target.value)}
-            className={classes.input}
+            className="bg-white text-gray-800 border border-gray-300 rounded py-2 px-3 w-full"
           />
         </div>
-        <div className={classes.formGroup}>
-          <label className={classes.label}>Product Price:</label>
+        <div className="mb-4">
+          <label className="block mb-1">Product Price:</label>
           <input
             type="text"
             value={productPrice}
             onChange={(e) => setProductPrice(e.target.value)}
-            className={classes.input}
+            className="bg-white text-gray-800 border border-gray-300 rounded py-2 px-3 w-full"
           />
         </div>
-        <div className={classes.formGroup}>
-          <label className={classes.label}>
-            Product Category:
-            <select className={classes.dropdown}>
+        <div className="flex flex-col sm:flex-row sm:space-x-4 mb-4">
+          <div className="w-full sm:w-1/2">
+            <label className="block mb-1">Product Category:</label>
+            <select
+              className="bg-white text-gray-800 border border-gray-300 rounded py-2 px-3 w-full"
+              onChange={(e) => setProductCategory(e.target.value)}
+              value={productCategory}
+            >
               <option value="monitors">Monitors</option>
               <option value="printers">Printers</option>
               <option value="all-in-one">All-in-one</option>
               <option value="laptops">Laptops</option>
               <option value="accessories">Accessories</option>
             </select>
-          </label>
-        </div>
-        <div className={classes.formGroup}>
-          <label className={classes.label}>
-            Product Brand:
-            <select className={classes.dropdown}>
+          </div>
+          <div className="w-full sm:w-1/2">
+            <label className="block mb-1">Product Brand:</label>
+            <select
+              className="bg-white text-gray-800 border border-gray-300 rounded py-2 px-3 w-full"
+              onChange={(e) => setProductBrand(e.target.value)}
+              value={productBrand}
+            >
               <option value="HP">HP</option>
               <option value="Dell">Dell</option>
               <option value="Samsung">Samsung</option>
               <option value="lenovo">Lenovo</option>
               <option value="acer">Acer</option>
             </select>
-          </label>
+          </div>
         </div>
-        <div className={classes.formGroup}>
-          <label className={classes.label}>Product Description:</label>
+        <div className="mb-4">
+          <label className="block mb-1">Product Description:</label>
           <textarea
             value={productDescription}
             onChange={(e) => setProductDescription(e.target.value)}
-            className={classes.textarea}
+            className="bg-white text-gray-800 border border-gray-300 rounded py-2 px-3 w-full"
           ></textarea>
         </div>
-
-        <div className={classes.formGroup}>
-          <label className={classes.label}>Product Images:</label>
+        <div className="mb-4">
+          <label className="block mb-1">Product Images:</label>
           <input
             type="file"
             accept="image/*"
             name="images"
             multiple
             onChange={(e) => setProductImages(e.target.files)}
-            className={classes.input}
+            className="border border-gray-300 py-2 px-3 w-full"
           />
         </div>
-        <div className={classes.formGroup}>
-          <button type="submit" className={classes.button}>
+        <div className="w-full">
+          <button
+            type="submit"
+            className="bg-blue-500 text-white hover:bg-blue-400 rounded py-2 px-4 sm:px-6 md:px-8 lg:px-10"
+          >
             Upload Product
           </button>
         </div>

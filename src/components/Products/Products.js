@@ -1,13 +1,11 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import { useLoaderData } from "react-router-dom";
 import axios from "axios";
-
-import classes from "./Product.module.css";
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import MotionComponent from "../Header/Animation";
 import { URL } from "../../Assets/environment/url";
+import { useLoaderData } from "react-router-dom";
 
 const Product = (props) => {
   const { product } = useLoaderData().data;
@@ -25,42 +23,61 @@ const Product = (props) => {
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
   };
+
   return (
-    <>
-      <MotionComponent>
-        <div className={classes.productCont}>
-          <div className={classes.corousel}>
+    <MotionComponent>
+      <div className="container flex flex-col md:h-[80vh] mx-auto py-6 justify-center ">
+        <div className="flex flex-col md:flex-row shadow-md p-4 rounded-lg shadow-green-300 ">
+          <div className="md:w-1/2 md:mr-8 p-4">
             <img
               src={images[currentImage]}
               alt={`img ${currentImage + 1}`}
-              className={classes.carouselimage}
+              className="w-auto h-64 mx-auto md:w-auto md:h-auto rounded-lg"
             />
-            <div className={classes.productBtn}>
-              <button onClick={prevImage} className={classes.corouselbutton}>
+            <div className="flex justify-center mt-4">
+              <button
+                onClick={prevImage}
+                className="p-2 bg-blue-500 text-white rounded-full hover:bg-blue-600"
+              >
                 <FontAwesomeIcon icon={faArrowLeft} />
               </button>
-              <button onClick={nextImage} className={classes.corouselbutton}>
+              <button
+                onClick={nextImage}
+                className="ml-4 p-2 bg-blue-500 text-white rounded-full hover:bg-blue-600"
+              >
                 <FontAwesomeIcon icon={faArrowRight} />
               </button>
             </div>
           </div>
-          <div className={classes.desCont}>
-            <p className={classes.description}>{product.productDescription}</p>
-            <div className={classes.productPrice}>
-              <p className={classes.price}>&#8377; {product.productPrice}</p>
-              <div className={classes.productBtn}>
-                <button className={classes.btn}>Add to Cart</button>
-                <NavLink className={classes.btn} to="/checkout" state={product}>
+          <div className="flex flex-col justify-center tracking-[1px] md:w-1/2 mt-4 md:mt-0">
+            <h1 className="text-4xl font-semibold mb-4">
+              {product.productName}
+            </h1>
+            <p className="text-xl mb-4">{product.productDescription}</p>
+            <div className="flex justify-between items-center ">
+              <p className="text-xl font-semibold">
+                &#8377; {product.productPrice}
+              </p>
+              <div className="flex space-x-4 ">
+                <button className="px-6 py-2 bg-blue-500 text-white rounded-full tracking-[2px] hover:bg-blue-800">
+                  Add to Cart
+                </button>
+                <NavLink
+                  className="px-6 py-2 bg-blue-500 text-white rounded-full tracking-[2px] hover:bg-blue-800"
+                  to="/checkout"
+                  state={product}
+                >
                   Buy Now
                 </NavLink>
               </div>
             </div>
           </div>
         </div>
-      </MotionComponent>
-    </>
+      </div>
+    </MotionComponent>
   );
 };
+
 export default Product;
 
 export const fetchProductDescription = async ({ params }) => {

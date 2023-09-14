@@ -1,12 +1,9 @@
 import { Fragment, useEffect, useState } from "react";
-// import { useSelector } from "react-redux";
 import axios from "axios";
-import classes from "./MyOrders.module.css";
-import { URL } from "../../../Assets/environment/url";
 import OrderCard from "../OrderCard/OrderCard";
+import { URL } from "../../../Assets/environment/url";
 
 const MyOrders = () => {
-  // const { userInfo } = useSelector((state) => state.login);
   const [myOrders, setMyOrders] = useState([]);
 
   useEffect(() => {
@@ -25,14 +22,14 @@ const MyOrders = () => {
 
   return (
     <Fragment>
-      <h2 className={classes.orderHeader}>My Orders</h2>
-      <ul>
+      <h2 className="text-4xl text-center mt-4 font-semibold mb-4">
+        My Orders
+      </h2>
+      <div className="shadow-lg p-8 grid gap-8 grid-cols-2 text-center md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {myOrders.map((el) => (
-          <li key={el._id}>
-            <OrderCard orderItem={el} />
-          </li>
+          <OrderCard key={el._id} orderItem={el} />
         ))}
-      </ul>
+      </div>
     </Fragment>
   );
 };
