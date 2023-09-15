@@ -10,6 +10,7 @@ import ProductCard from "../ProductCard/ProductCard";
 import ContactForm from "./Contact";
 import MotionComponent from "../Header/Animation";
 import NewsletterSection from "./Subscribe";
+import FooterPart from "../Footer/FooterPart";
 
 const LandingPage = () => {
   const { product } = useLoaderData();
@@ -23,7 +24,7 @@ const LandingPage = () => {
     <Suspense
       fallback={
         <div className="flex justify-center items-center min-h-screen">
-          <div className="loader"></div>
+          <div className="loader animate-spin rounded-full h-24 w-24 border-t-4 border-b-4 border-blue-900"></div>
         </div>
       }
     >
@@ -43,6 +44,7 @@ const LandingPage = () => {
       <Testimonial />
       <NewsletterSection />
       <ContactForm />
+      <FooterPart />
     </Suspense>
   );
 };

@@ -5,7 +5,6 @@ import axios from "axios";
 import Login from "./Pages/authentication/Login/Login";
 import Signup from "./Pages/authentication/SignUp/Signup";
 import LandingPage, { fetchProducts } from "./components/MainPage/LandingPage";
-import FooterPart from "./components/Footer/FooterPart";
 import ErrorPage from "./Pages/Error/errorPage";
 import Product from "./components/Products/Products";
 import { fetchProductDescription } from "./components/Products/Products";
@@ -18,6 +17,7 @@ import { URL } from "./Assets/environment/url";
 import { loginSliceActions } from "./Store/loginSlice";
 import MainLayout from "./UI/MainLayout";
 import UICallback from "./Pages/Payment/UICallback/UICallback";
+import DeveloperProfiles from "./components/Footer/Developers";
 
 axios.defaults.withCredentials = true;
 
@@ -67,6 +67,10 @@ const router = createBrowserRouter([
         path: "/UICallback",
         element: <UICallback />,
       },
+      {
+        path: "/developer",
+        element: <DeveloperProfiles />,
+      },
     ],
   },
 ]);
@@ -97,8 +101,6 @@ function App() {
   return (
     <>
       <RouterProvider router={router} />
-
-      <FooterPart />
     </>
   );
 }

@@ -47,14 +47,14 @@ const Filter = (props) => {
 
   return (
     <div className="flex justify-between bg-blue-500 p-2 md:p-4 lg:p-6 shadow-md shadow-green-300">
-      <h2 className="text-white text-3xl sm:text-3xl md:text-4xl lg:text-5xl ">
+      <h2 className="text-white text-2xl md:text-4xl lg:text-5xl ">
         Browse Our Collection
       </h2>
       <div className="flex flex-col sm:flex-row justify-end items-center">
         <p className="text-black text-lg sm:text-xl md:text-2xl lg:text-3xl mb-2 sm:mb-0 underline decoration-red-500 tracking-[1px] underline-offset-8">
           Filter
         </p>
-        <div className="flex flex-col sm:flex-row items-center">
+        <div className="flex flex-row items-center gap-4">
           <select
             className="bg-white text-blue-500 border border-blue-500 rounded px-2 py-1 sm:mx-2 lg:px-4 lg:py-3"
             onChange={dropdownChange}
