@@ -34,7 +34,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`bg-blue-500 p-2 md:p-4 lg:p-6 sticky top-0 z-50 shadow-md`}
+      className={`bg-blue-400 p-2 md:p-4 lg:p-6 sticky top-0 z-50 shadow-md`}
     >
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
@@ -45,7 +45,7 @@ const Navbar = () => {
             onClick={() => navigate("/")}
           />
         </div>
-        <h2 className="text-green-200 ml-2 text-3xl md:text-2xl lg:text-4xl font-bold">
+        <h2 className="text-green-200 ml-2 text-3xl md:text-2xl lg:text-4xl font-bold tracking-[1px]">
           North Star
         </h2>
         <div className="hidden md:flex items-center space-x-2 text-lg md:space-x-4 lg:space-x-6">

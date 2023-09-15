@@ -40,7 +40,7 @@ const Carousel = () => {
       <Slider {...settings}>
         {SliderData.map((img, idx) => (
           <img
-            key={idx.image}
+            key={img.image}
             src={img.image}
             alt={`img-${idx}`}
             className="w-full h-96 lg:h-[70vh] object-scale-down"
