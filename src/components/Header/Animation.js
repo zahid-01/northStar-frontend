@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 
 const MotionComponent = ({ children }) => {
   const [isVisible, setIsVisible] = useState(false);
+  const controls = useAnimation();
   const motionRef = useRef(null);
 
   useEffect(() => {
@@ -26,12 +27,21 @@ const MotionComponent = ({ children }) => {
     };
   }, []);
 
+  useEffect(() => {
+    if (isVisible) {
+      controls.start({
+        y: 0,
+        opacity: 1,
+        transition: { duration: 1, type: "spring", stiffness: 300 },
+      });
+    }
+  }, [isVisible, controls]);
+
   return (
     <motion.div
       ref={motionRef}
-      initial={{ x: 100, opacity: 0 }}
-      animate={isVisible ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
-      transition={{ duration: 1 }}
+      initial={{ y: 100, opacity: 0 }}
+      animate={controls}
     >
       {children}
     </motion.div>
