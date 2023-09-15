@@ -74,8 +74,8 @@ const DeveloperProfiles = () => {
             alt={developer.name}
             className="w-32 h-32 md:w-48 md:h-48 rounded-full object-cover"
           />
-          <div className="flex-grow">
-            <h2 className="text-xl md:text-2xl font-semibold">
+          <div className="flex-grow tracking-[1px]">
+            <h2 className="text-xl md:text-2xl font-semibold ">
               {developer.name}
             </h2>
             <p className="text-gray-500">{developer.position}</p>
