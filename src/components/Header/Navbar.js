@@ -34,7 +34,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`bg-blue-400 p-2 md:p-4 lg:p-6 sticky top-0 z-50 shadow-md`}
+      className={`backdrop-blur-md p-2 md:p-4 lg:p-6 sticky top-0 z-50 shadow-lg`}
     >
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
@@ -45,7 +45,7 @@ const Navbar = () => {
             onClick={() => navigate("/")}
           />
         </div>
-        <h2 className="text-green-200 ml-2 text-3xl md:text-2xl lg:text-4xl font-bold tracking-[1px]">
+        <h2 className="text-green-500 ml-2 text-3xl md:text-2xl lg:text-4xl font-bold tracking-[1px]">
           North Star
         </h2>
         <div className="hidden md:flex items-center space-x-2 text-lg md:space-x-4 lg:space-x-6">
@@ -54,14 +54,14 @@ const Navbar = () => {
               {userInfo.role === "ns-admin" && (
                 <NavLink
                   to="inventory"
-                  className="text-white hover:underline font-semibold"
+                  className="text-black hover:underline font-semibold"
                 >
                   Inventory
                 </NavLink>
               )}
               <NavLink
                 to="myOrders"
-                className="text-white hover:underline font-semibold"
+                className="text-black hover:underline font-semibold"
               >
                 My Orders
               </NavLink>
@@ -71,13 +71,13 @@ const Navbar = () => {
             <>
               <NavLink
                 to="login"
-                className="text-white hover:underline font-semibold"
+                className="text-black hover:underline font-semibold"
               >
                 Login
               </NavLink>
               <NavLink
                 to="signUp"
-                className="text-white hover:underline font-semibold"
+                className="text-black hover:underline font-semibold"
               >
                 Sign up
               </NavLink>
@@ -87,13 +87,13 @@ const Navbar = () => {
             <div className="flex items-center">
               <NavLink
                 to="#"
-                className="text-white font-semibold hover:underline"
+                className="text-green-500 text-xl tracking-[1px] font-semibold underline"
               >
                 {userInfo.name}
               </NavLink>
               <button
                 onClick={logoutHandler}
-                className="bg-white text-blue-500 px-2 py-1 rounded-full font-semibold hover:bg-blue-100 ml-2"
+                className="bg-black text-red-500 px-3 py-2 rounded-full font-semibold hover:bg-blue-100 ml-2"
               >
                 Logout
               </button>
