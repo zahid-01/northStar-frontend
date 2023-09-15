@@ -114,9 +114,9 @@ const Login = () => {
                   className="absolute inset-y-0 right-0 flex items-center pr-2 cursor-pointer"
                 >
                   {showPassword ? (
-                    <FontAwesomeIcon icon={faEyeSlash} />
-                  ) : (
                     <FontAwesomeIcon icon={faEye} />
+                  ) : (
+                    <FontAwesomeIcon icon={faEyeSlash} />
                   )}
                 </span>
               </div>
@@ -124,15 +124,35 @@ const Login = () => {
             <div className="mt-4">
               <button
                 type="submit"
-                className="bg-amazon-orange text-white py-2 px-4 rounded-md hover:bg-amazon-dark-orange w-full"
+                className="bg-orange-500 text-white py-2 px-4 rounded-md hover:bg-orange-400 w-full"
                 onClick={loginHandler}
               >
                 Sign-In
               </button>
             </div>
+            <div className="mt-4">
+              <p className="font-bold text-xl text-center mb-4">or</p>
+              <button className="bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-700 w-full mb-2">
+                <i className="fa fa-google mr-2"></i>
+                Sign-In with Google
+              </button>
+              <button className="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-800 w-full mb-2">
+                <i className="fa fa-facebook mr-2"></i>
+                Sign-In with Facebook
+              </button>
+              <button className="bg-blue-400 text-white py-2 px-4 rounded-md hover:bg-blue-700 w-full">
+                <i className="fa fa-twitter mr-2"></i>
+                Sign-In with Twitter
+              </button>
+            </div>
             <p className="text-center mt-4 text-gray-600 text-sm">
               Don't have an account?{" "}
-              <a href="www.jknorthstar.com">Create one here</a>
+              <a
+                href="www.jknorthstar.com"
+                className="hover:text-black tracking-[1px]"
+              >
+                Create one here
+              </a>
             </p>
           </form>
         </div>

@@ -353,12 +353,12 @@ const Signup = () => {
                   className="absolute inset-y-0 right-0 flex items-center pr-2 cursor-pointer"
                 >
                   {showPassword ? (
+                    <FontAwesomeIcon icon={faEye} className="text-gray-400" />
+                  ) : (
                     <FontAwesomeIcon
                       icon={faEyeSlash}
-                      className="text-gray-400"
+                      className="text-blue-500"
                     />
-                  ) : (
-                    <FontAwesomeIcon icon={faEye} className="text-blue-500" />
                   )}
                 </span>
               </div>

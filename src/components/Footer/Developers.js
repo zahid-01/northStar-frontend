@@ -65,7 +65,7 @@ const DeveloperProfiles = () => {
                 rel="noopener noreferrer"
                 className="text-blue-400 hover:text-blue-700 transition duration-300"
               >
-                <i className="fa fa-twitter "></i>
+                <i className="fa fa-twitter"></i>
               </a>
             </div>
           </div>
