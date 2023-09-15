@@ -103,7 +103,7 @@ const Navbar = () => {
 
         <div className="md:hidden">
           <button
-            className="text-white"
+            className="text-black"
             onClick={toggleMobileMenu}
             aria-label={isMobileMenuOpen ? "Close Menu" : "Open Menu"}
           >
@@ -113,21 +113,21 @@ const Navbar = () => {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-blue-500 py-2">
+        <div className="md:hidden py-2">
           <div className="container mx-auto space-y-4">
             {isLoggedIn && (
               <>
                 {userInfo.role === "ns-admin" && (
                   <NavLink
                     to="inventory"
-                    className="text-center text-white block hover:underline font-semibold"
+                    className="text-center text-black block hover:underline font-semibold"
                   >
                     Inventory
                   </NavLink>
                 )}
                 <NavLink
                   to="myOrders"
-                  className="text-center text-white block hover:underline font-semibold"
+                  className="text-center text-black block hover:underline font-semibold"
                 >
                   My Orders
                 </NavLink>
@@ -137,13 +137,13 @@ const Navbar = () => {
               <>
                 <NavLink
                   to="login"
-                  className="text-center text-white block hover:underline text-[18px] font-bold tracking-[1px]"
+                  className="text-center text-black block hover:underline text-[18px] font-bold tracking-[1px]"
                 >
                   Login
                 </NavLink>
                 <NavLink
                   to="signUp"
-                  className="text-center text-white block hover:underline text-[18px] font-bold tracking-[1px]"
+                  className="text-center text-black block hover:underline text-[18px] font-bold tracking-[1px]"
                 >
                   Sign up
                 </NavLink>
@@ -153,13 +153,13 @@ const Navbar = () => {
               <div className="flex items-center justify-center">
                 <NavLink
                   to="#"
-                  className="text-white font-semibold hover:underline"
+                  className="text-green-500 font-semibold hover:underline"
                 >
                   {userInfo.name}
                 </NavLink>
                 <button
                   onClick={logoutHandler}
-                  className="bg-white text-blue-500 px-2 py-1 rounded-full font-semibold hover:bg-blue-100 ml-2"
+                  className="bg-black text-red-500 px-2 py-1 rounded-full font-semibold hover:bg-blue-100 ml-2"
                 >
                   Logout
                 </button>
