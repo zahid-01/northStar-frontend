@@ -29,7 +29,7 @@ const ProductCard = ({ products, filterValue }) => {
                   <p className="text-center text-xl font-semibold mt-2">
                     &#8377;{el.productPrice}
                   </p>
-                  <p className="text-sm md:text-base mt-2">
+                  <p className="text-sm text-center md:text-base mt-2">
                     {el.productDescription}
                   </p>
                 </div>

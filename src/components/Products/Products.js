@@ -27,7 +27,7 @@ const Product = (props) => {
   return (
     <MotionComponent>
       <div className="container flex flex-col md:h-[80vh] mx-auto py-6 justify-center ">
-        <div className="flex flex-col md:flex-row shadow-md p-4 rounded-lg shadow-green-300 ">
+        <div className="bg-slate-200 flex flex-col md:flex-row shadow-md p-4 rounded-lg shadow-green-300 ">
           <div className="md:w-1/2 md:mr-8 p-4">
             <img
               src={images[currentImage]}
@@ -63,7 +63,7 @@ const Product = (props) => {
                   Add to Cart
                 </button>
                 <NavLink
-                  className="px-4 py-2 bg-blue-500 text-white rounded-full tracking-[2px] hover:bg-blue-800"
+                  className="px-4 py-2 bg-blue-500 text-white rounded-full text-center tracking-[2px] hover:bg-blue-800"
                   to="/checkout"
                   state={product}
                 >

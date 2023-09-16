@@ -15,7 +15,7 @@ const FooterPart = () => {
             <img alt="Logo" src={logo} className="w-16 h-16 md:w-32 md:h-20" />
           </a>
           <div className="flex justify-between gap-8 md:space-x-6 text-black mt-4 md:mt-0">
-            <div className="md:w-1/2">
+            <div className="md:w-1/2 text-sm lg:text-lg">
               <h6 className="text-lg font-semibold mb-2">Address</h6>
               <p className="mb-2">
                 Mir Mall Complex opposite
@@ -43,7 +43,7 @@ const FooterPart = () => {
                 Northstar@gmail.com
               </a>
             </div>
-            <div className="mt-4 md:mt-0">
+            <div className="mt-4 md:mt-0 text-sm lg:text-lg">
               <h6 className="text-lg font-semibold mb-2">Links</h6>
               <a href="privacy" className="block mb-1">
                 Privacy Policy
@@ -62,10 +62,10 @@ const FooterPart = () => {
         </div>
       </div>
       <div className="bg-blue-800 flex justify-between p-4 text-white text-center">
-        <p className="text-lg mb-2">
+        <p className="text-md lg:text-xl mb-2">
           &copy; Copyright All rights reserved NorthStar
         </p>
-        <a href="developer" className="flex items-center justify-center">
+        <a href="developer" className="text-sm lg:text-xl">
           Developers Link
           <FontAwesomeIcon icon={faHeart} className="ml-1" />
         </a>

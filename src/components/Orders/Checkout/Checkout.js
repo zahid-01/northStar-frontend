@@ -32,13 +32,17 @@ const Checkout = () => {
   return (
     <>
       <div className="container mx-auto p-4 md:p-6 lg:p-8 xl:p-10">
-        <div className="bg-white flex flex-col shadow-md shadow-green-300 p-4 justify-center md:p-6 lg:p-8 xl:p-10 rounded-lg">
+        <div className="bg-slate-200 flex flex-col shadow-md shadow-green-300 p-4 justify-center md:p-6 lg:p-8 xl:p-10 rounded-lg">
           <h2 className="text-4xl text-blue-600 text-center font-semibold mb-8">
             Delivery
           </h2>
           <div className="flex flex-col md:flex-row ">
             <div className="md:w-1/3">
-              <img src={product.images[0]} alt="product" className="w-full" />
+              <img
+                src={product.images[0]}
+                alt="product"
+                className="w-full rounded-full lg:rounded-3xl"
+              />
             </div>
             <div className="text-center flex flex-col py-8 text-xl justify-center md:w-2/3 mt-4 md:mt-0 md:ml-4">
               <div className="mb-2">
@@ -68,7 +72,7 @@ const Checkout = () => {
         </div>
       </div>
       <div className="p-4 md:p-6 lg:p-8 xl:p-10">
-        <div className="bg-white shadow-md p-4 md:p-6 lg:p-8 xl:p-10 rounded-lg">
+        <div className="bg-slate-200 shadow-md p-4 md:p-6 lg:p-8 xl:p-10 rounded-lg">
           <h2 className="text-2xl font-semibold mb-4">Summary</h2>
           <div className="space-y-2">
             <div className="flex justify-between">
