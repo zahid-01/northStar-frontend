@@ -106,9 +106,9 @@ const Signup = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-t from-blue-500 to-white shadow-md">
+    <div className="min-h-screen flex items-center justify-center  shadow-md">
       <MotionComponent>
-        <div className="bg-zinc-200 mt-6 p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20 rounded-lg shadow-md w-full">
+        <div className="bg-gradient-to-b from-zinc-200 to-blue-200 mt-6 p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20 rounded-lg shadow-md w-full">
           <p className="w-full lg:w-1/4 mx-auto text-center text-2xl font-bold text-gray-800 mb-10 p-2 rounded-xl bg-gradient-to-t from-blue-300 to-white shadow-md shadow-black uppercase">
             Sign-up
           </p>
