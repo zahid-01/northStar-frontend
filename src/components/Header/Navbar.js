@@ -25,6 +25,7 @@ const Navbar = () => {
         if (res.data.status === "Success") {
           dispatch(loginSliceActions.setLogin(false));
           dispatch(loginSliceActions.setUserInfo(null));
+          window.location.href = "/";
         }
       })
       .catch((e) => {
@@ -64,6 +65,12 @@ const Navbar = () => {
                 className="text-black hover:underline font-semibold"
               >
                 My Orders
+              </NavLink>
+              <NavLink
+                to="cart"
+                className="text-center text-black block hover:underline font-semibold"
+              >
+                Cart<i className="fa fa-shopping-cart ml-1"></i>
               </NavLink>
             </>
           )}
@@ -130,6 +137,12 @@ const Navbar = () => {
                   className="text-center text-black block hover:underline font-semibold"
                 >
                   My Orders
+                </NavLink>
+                <NavLink
+                  to="cart"
+                  className="text-center text-black block hover:underline font-semibold"
+                >
+                  Cart
                 </NavLink>
               </>
             )}
