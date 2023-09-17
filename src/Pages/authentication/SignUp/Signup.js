@@ -109,7 +109,7 @@ const Signup = () => {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-t from-blue-500 to-white shadow-md">
       <MotionComponent>
         <div className="bg-zinc-200 mt-6 p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20 rounded-lg shadow-md w-full">
-          <p className="w-full lg:w-1/4 mx-auto text-center text-2xl font-bold text-gray-800 mb-4 p-2 rounded-xl bg-gradient-to-t from-blue-300 to-white shadow-md shadow-black uppercase">
+          <p className="w-full lg:w-1/4 mx-auto text-center text-2xl font-bold text-gray-800 mb-10 p-2 rounded-xl bg-gradient-to-t from-blue-300 to-white shadow-md shadow-black uppercase">
             Sign-up
           </p>
           <form className="lg:grid container lg:w-screen lg:grid-cols-2 gap-4">
