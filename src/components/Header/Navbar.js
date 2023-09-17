@@ -46,7 +46,7 @@ const Navbar = () => {
           />
         </div>
         <h2 className="text-green-500 ml-2 text-3xl md:text-2xl lg:text-4xl font-bold tracking-[1px]">
-          North Star
+          NORTH STAR
         </h2>
         <div className="hidden md:flex items-center space-x-2 text-lg md:space-x-4 lg:space-x-6">
           {isLoggedIn && (
