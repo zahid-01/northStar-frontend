@@ -19,6 +19,7 @@ import MainLayout from "./UI/MainLayout";
 import UICallback from "./Pages/Payment/UICallback/UICallback";
 import DeveloperProfiles from "./components/Footer/Developers";
 import ShoppingCart from "./components/Orders/OrderCard/ShoppingCart";
+import { cartSliceActions } from "./Store/cartSlice";
 
 axios.defaults.withCredentials = true;
 
@@ -91,8 +92,10 @@ function App() {
       })
         .then((res) => {
           if (res.status === 200) {
+            console.log(res.data.userData.cart);
             dispatch(loginSliceActions.setLogin(true));
             dispatch(loginSliceActions.setUserInfo(res.data.userData));
+            dispatch(cartSliceActions.addItems(res.data.userData.cart));
           } else {
             dispatch(loginSliceActions.setLogin(false));
             dispatch(loginSliceActions.setUserInfo(null));

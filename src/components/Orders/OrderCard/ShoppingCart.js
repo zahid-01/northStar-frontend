@@ -1,15 +1,14 @@
+import { useSelector } from "react-redux";
 import React from "react";
 
 function ShoppingCart() {
-  const products = [
-    { id: 1, name: "Product 1", price: 100 },
-    { id: 2, name: "Product 2", price: 150 },
-    { id: 3, name: "Product 3", price: 200 },
-    { id: 4, name: "Product 4", price: 200 },
-    { id: 5, name: "Product 5", price: 200 },
-    { id: 6, name: "Product 6", price: 200 },
-    { id: 7, name: "Product 7", price: 200 },
-  ];
+  const { cartItems } = useSelector((state) => state.cart);
+  console.log("This is cart ", cartItems);
+  const products = cartItems[0];
+
+  const checkoutHandler = () => {
+    console.log("hola");
+  };
 
   return (
     <div className="container bg-zinc-200 p-6 mx-auto m-8 rounded-xl">
@@ -24,7 +23,7 @@ function ShoppingCart() {
                   &#8377;{product.price.toFixed(2)}
                 </p>
                 <button
-                  onClick={""}
+                  onClick={checkoutHandler}
                   className="mt-2 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full"
                 >
                   Checkout
