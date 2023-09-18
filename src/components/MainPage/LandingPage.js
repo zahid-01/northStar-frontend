@@ -5,7 +5,7 @@ import { SliderData } from "../Header/SliderData";
 import Filter from "./Filter";
 import axios from "axios";
 import Testimonial from "./Testimonial";
-import { AWS_URL } from "../../Assets/environment/url";
+import { URL } from "../../Assets/environment/url";
 import ProductCard from "../ProductCard/ProductCard";
 import ContactForm from "./Contact";
 import MotionComponent from "../Header/Animation";
@@ -46,7 +46,7 @@ export default LandingPage;
 const loadProducts = async () => {
   const products = await axios({
     method: "GET",
-    url: `${AWS_URL}products`,
+    url: `${URL}products`,
   }).catch((e) => {
     throw new Error();
   });

@@ -92,10 +92,9 @@ function App() {
       })
         .then((res) => {
           if (res.status === 200) {
-            console.log(res.data.userData.cart);
+            dispatch(cartSliceActions.addItems(res.data.userData.cart));
             dispatch(loginSliceActions.setLogin(true));
             dispatch(loginSliceActions.setUserInfo(res.data.userData));
-            dispatch(cartSliceActions.addItems(res.data.userData.cart));
           } else {
             dispatch(loginSliceActions.setLogin(false));
             dispatch(loginSliceActions.setUserInfo(null));
