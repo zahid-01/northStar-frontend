@@ -17,7 +17,6 @@ import { URL } from "./Assets/environment/url";
 import { loginSliceActions } from "./Store/loginSlice";
 import MainLayout from "./UI/MainLayout";
 import UICallback from "./Pages/Payment/UICallback/UICallback";
-import FooterPart from "./components/Footer/FooterPart";
 import DeveloperProfiles from "./components/Footer/Developers";
 import ShoppingCart from "./components/Orders/OrderCard/ShoppingCart";
 
@@ -114,7 +113,6 @@ function App() {
         }
       >
         <RouterProvider router={router} />
-        <FooterPart />
       </Suspense>
     </>
   );

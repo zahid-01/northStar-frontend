@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import logo from "../../Assets/Imgs/796994.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -65,10 +66,10 @@ const FooterPart = () => {
         <p className="text-md lg:text-xl mb-2">
           &copy; Copyright All rights reserved NorthStar
         </p>
-        <a href="developer" className="text-sm lg:text-xl">
+        <NavLink to={"developer"} key={1} className="text-sm lg:text-xl">
           Developers Link
           <FontAwesomeIcon icon={faHeart} className="ml-1" />
-        </a>
+        </NavLink>
       </div>
     </>
   );

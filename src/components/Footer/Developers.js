@@ -11,7 +11,15 @@ const DeveloperProfiles = () => {
       name: "Zahid Hussain Khan",
       position: "Full Stack Developer",
       image: img,
-      skills: ["React", "Node.js", "JavaScript", "MongoDB"],
+      skills: [
+        "Java",
+        "Spring Boot",
+        "JavaScript",
+        "ExpressJs",
+        "React",
+        "Node.js",
+        "MongoDB",
+      ],
       bio: "I am a passionate full-stack developer with expertise in React, Node.js, and JavaScript. I enjoy building scalable web applications.",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/zahidhkhan/",

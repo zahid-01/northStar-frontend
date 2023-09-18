@@ -4,7 +4,7 @@ import axios from "axios";
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import MotionComponent from "../Header/Animation";
-import { URL } from "../../Assets/environment/url";
+import { AWS_URL } from "../../Assets/environment/url";
 import { useLoaderData } from "react-router-dom";
 
 const Product = (props) => {
@@ -85,7 +85,7 @@ export const fetchProductDescription = async ({ params }) => {
 
   await axios({
     method: "GET",
-    url: `${URL}products/${params.id}`,
+    url: `${AWS_URL}products/${params.id}`,
   })
     .then((res) => (product = res))
     .catch((e) => {
