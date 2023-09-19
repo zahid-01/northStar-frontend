@@ -92,7 +92,7 @@ function App() {
       })
         .then((res) => {
           if (res.status === 200) {
-            dispatch(cartSliceActions.addItems(res.data.userData.cart));
+            dispatch(cartSliceActions.setItems(res.data.userData.cart));
             dispatch(loginSliceActions.setLogin(true));
             dispatch(loginSliceActions.setUserInfo(res.data.userData));
           } else {
