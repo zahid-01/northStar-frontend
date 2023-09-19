@@ -5,6 +5,8 @@ import axios from "axios";
 import { loginSliceActions } from "../../Store/loginSlice";
 import { URL } from "../../Assets/environment/url";
 import logo from "../../Assets/Imgs/796994.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -70,7 +72,7 @@ const Navbar = () => {
                 to="cart"
                 className="text-center text-black block hover:underline font-semibold"
               >
-                Cart<i className="fa fa-shopping-cart ml-1"></i>
+                Cart
               </NavLink>
             </>
           )}
@@ -114,7 +116,11 @@ const Navbar = () => {
             onClick={toggleMobileMenu}
             aria-label={isMobileMenuOpen ? "Close Menu" : "Open Menu"}
           >
-            {isMobileMenuOpen ? "✕" : "☰"}
+            {isMobileMenuOpen ? (
+              <FontAwesomeIcon icon={faClose} />
+            ) : (
+              <FontAwesomeIcon icon={faBars} />
+            )}
           </button>
         </div>
       </div>
@@ -136,13 +142,13 @@ const Navbar = () => {
                   to="myOrders"
                   className="text-center text-black block hover:underline font-semibold"
                 >
-                  My Orders
+                  My Orders <i className="fa fa-gift ml-1"></i>
                 </NavLink>
                 <NavLink
                   to="cart"
                   className="text-center text-black block hover:underline font-semibold"
                 >
-                  Cart
+                  Cart <i className="fa fa-shopping-cart ml-1"></i>
                 </NavLink>
               </>
             )}
@@ -166,13 +172,13 @@ const Navbar = () => {
               <div className="flex items-center justify-center">
                 <NavLink
                   to="#"
-                  className="text-green-500 font-semibold hover:underline"
+                  className="text-green-500 font-semibold tracking-[1px] hover:underline"
                 >
-                  {userInfo.name}
+                  {userInfo.name} 🙂
                 </NavLink>
                 <button
                   onClick={logoutHandler}
-                  className="bg-black text-red-500 px-2 py-1 rounded-full font-semibold hover:bg-blue-100 ml-2"
+                  className="bg-blue-500 text-white px-2 py-1 rounded-full font-semibold hover:bg-red-500 ml-2"
                 >
                   Logout
                 </button>

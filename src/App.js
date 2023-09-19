@@ -18,7 +18,7 @@ import { loginSliceActions } from "./Store/loginSlice";
 import MainLayout from "./UI/MainLayout";
 import UICallback from "./Pages/Payment/UICallback/UICallback";
 import DeveloperProfiles from "./components/Footer/Developers";
-import ShoppingCart from "./components/Orders/OrderCard/ShoppingCart";
+import ShoppingCart from "./components/Cart/ShoppingCart";
 import { cartSliceActions } from "./Store/cartSlice";
 
 axios.defaults.withCredentials = true;

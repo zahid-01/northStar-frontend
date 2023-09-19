@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useState } from "react";
 import axios from "axios";
-import OrderCard from "../OrderCard/OrderCard";
+import OrderCard from "../../Cart/OrderCard";
 import { URL } from "../../../Assets/environment/url";
 // import ShoppingCart from "../OrderCard/ShoppingCart";
 const MyOrders = () => {
