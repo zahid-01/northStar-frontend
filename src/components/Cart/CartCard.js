@@ -15,8 +15,8 @@ const CartCard = ({ product }) => {
         <p className="text-center text-blue-700 font-semibold">
           &#8377;{product.productPrice}
         </p>
-        <button className="text-white bg-red-600 px-3 py-4 rounded-2xl flex mx-auto mt-4 ">
-          remove
+        <button className="text-white bg-red-600 px-3 py-4 rounded-2xl flex mx-auto mt-4 hover:bg-red-700">
+          remove <i className="fa fa-trash ml-2 mt-1" />
         </button>
       </div>
     </>
