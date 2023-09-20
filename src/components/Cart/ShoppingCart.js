@@ -8,31 +8,35 @@ function ShoppingCart() {
   console.log(cartItems);
 
   return (
-    <div className="min-h-screen container bg-zinc-200 p-6 mx-auto m-8 rounded-xl">
-      <h2 className="text-center text-3xl font-semibold mb-8">Shopping Cart</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="col-span-4">
-          {cartItems.length === 0 ? (
-            <div className="text-center text-xl font-semibold mb-4 flex flex-col gap-8">
-              Your cart is empty 😥
-              <br /> Start shopping now!
-              <NavLink to="/" className="text-blue-500">
-                Go to Home ➡
-              </NavLink>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {cartItems.map((el) => (
-                <CartCard product={el} key={el._id} />
-              ))}
-            </div>
-          )}
+    <>
+      <div className="min-h-screen container bg-zinc-200 p-6 mx-auto m-8 rounded-xl">
+        <h2 className="text-center text-3xl font-semibold mb-8">
+          Shopping Cart
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="col-span-4">
+            {cartItems.length === 0 ? (
+              <div className="text-center text-xl font-semibold mb-4 flex flex-col gap-8">
+                Your cart is empty 😥
+                <br /> Start shopping now!
+                <NavLink to="/" className="text-blue-500">
+                  Go to Home ➡
+                </NavLink>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {cartItems.map((el) => (
+                  <CartCard product={el} key={el._id} />
+                ))}
+              </div>
+            )}
+          </div>
         </div>
       </div>
-      <button className="bg-blue-500 text-white px-4 py-6 mt-4 rounded-xl mx-auto flex tracking-[1px] font-bold shadow-md shadow-green-500 hover:bg-blue-700">
+      <button className="bg-blue-500 text-white px-4 py-6 mb-4 rounded-xl mx-auto flex tracking-[1px] font-bold shadow-md shadow-green-500 hover:bg-blue-700">
         Checkout
       </button>
-    </div>
+    </>
   );
 }
 
