@@ -2,9 +2,12 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import { loginSliceActions } from "../../../Store/loginSlice";
+
+import { cartSliceActions } from "../../../Store/cartSlice";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
-import { loginSliceActions } from "../../../Store/loginSlice";
 import { URL } from "../../../Assets/environment/url";
 import img from "../../../Assets/Imgs/796994.png";
 import MotionComponent from "../../../components/Header/Animation";
@@ -48,6 +51,8 @@ const Login = () => {
         if (res.status === 200) {
           dispatch(loginSliceActions.setLogin(true));
           dispatch(loginSliceActions.setUserInfo(res.data.userData));
+          dispatch(cartSliceActions.setItems(res.data.userData.cart));
+          dispatch(cartSliceActions.setCount(res.data.userData.cart.length));
           navigate("/");
         }
 

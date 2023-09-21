@@ -13,13 +13,11 @@ import ProductUpload from "./components/Inventory/ProductUploads/ProductUpload";
 import MyOrders from "./components/Orders/MyOrders/MyOrders";
 import Checkout from "./components/Orders/Checkout/Checkout";
 import { tokenLoader } from "./Utilities/tokenLoader";
-import { URL } from "./Assets/environment/url";
-import { loginSliceActions } from "./Store/loginSlice";
 import MainLayout from "./UI/MainLayout";
 import UICallback from "./Pages/Payment/UICallback/UICallback";
 import DeveloperProfiles from "./components/Footer/Developers";
 import ShoppingCart from "./components/Cart/ShoppingCart";
-import { cartSliceActions } from "./Store/cartSlice";
+import { getLoginInfo } from "./Pages/authentication/Login/getLoginInfo";
 
 axios.defaults.withCredentials = true;
 
@@ -85,26 +83,9 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const checkLoginState = async () => {
-      await axios({
-        method: "GET",
-        url: `${URL}user/isLoggedIn`,
-      })
-        .then((res) => {
-          if (res.status === 200) {
-            dispatch(cartSliceActions.setItems(res.data.userData.cart));
-            dispatch(loginSliceActions.setLogin(true));
-            dispatch(loginSliceActions.setUserInfo(res.data.userData));
-          } else {
-            dispatch(loginSliceActions.setLogin(false));
-            dispatch(loginSliceActions.setUserInfo(null));
-          }
-        })
-        .catch((e) => console.log(e));
-    };
-
-    checkLoginState();
+    getLoginInfo(dispatch);
   }, [dispatch]);
+
   return (
     <>
       <Suspense

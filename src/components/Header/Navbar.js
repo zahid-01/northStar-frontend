@@ -12,6 +12,8 @@ const Navbar = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { isLoggedIn, userInfo } = useSelector((state) => state.login);
+  const { cartCount } = useSelector((state) => state.cart);
+
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -72,7 +74,7 @@ const Navbar = () => {
                 to="cart"
                 className="text-center text-black block hover:underline font-semibold"
               >
-                Cart
+                Cart ({cartCount})
               </NavLink>
             </>
           )}

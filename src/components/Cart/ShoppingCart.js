@@ -5,8 +5,6 @@ import CartCard from "./CartCard";
 function ShoppingCart() {
   const { cartItems } = useSelector((state) => state.cart);
 
-  console.log(cartItems);
-
   return (
     <>
       <div className="min-h-screen container bg-zinc-200 p-6 mx-auto m-8 rounded-xl">

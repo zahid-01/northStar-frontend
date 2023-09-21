@@ -11,12 +11,6 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log("First Name:", firstName);
-    console.log("Last Name:", lastName);
-    console.log("Email:", email);
-    console.log("Number:", number);
-    console.log("Message:", message);
-
     setShowPopup(true);
     setTimeout(() => {
       setShowPopup(false);
