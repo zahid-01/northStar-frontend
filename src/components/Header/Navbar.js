@@ -104,7 +104,7 @@ const Navbar = () => {
               </NavLink>
               <button
                 onClick={logoutHandler}
-                className="bg-black text-red-500 px-3 py-2 rounded-full font-semibold hover:bg-blue-100 ml-2"
+                className="bg-blue-500 text-white px-3 py-2 rounded-full font-semibold hover:bg-red-500 ml-2"
               >
                 Logout
               </button>
