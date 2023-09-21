@@ -25,7 +25,7 @@ function ShoppingCart() {
               <>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
                   {cartItems.map((el) => (
-                    <CartCard product={el} key={el._id} />
+                    <CartCard product={el} />
                   ))}
                 </div>
                 <button className="bg-blue-500 text-white px-4 justify-center mx-auto py-6 mb-4 rounded-xl flex tracking-[1px] font-bold shadow-md shadow-green-500 mt-[24%] hover:bg-blue-700">
