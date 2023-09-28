@@ -5,12 +5,16 @@ import {
   faEnvelope,
   faPhone,
   faHeart,
+  faArrowCircleUp,
 } from "@fortawesome/free-solid-svg-icons";
-
+import { animateScroll as scroll } from "react-scroll";
 const FooterPart = () => {
+  function scrollToTop() {
+    scroll.scrollToTop();
+  }
   return (
     <>
-      <div className="py-8 border-t-4 border-blue-400 bg-slate-300">
+      <div className="relative py-8 border-t-4 border-blue-400 bg-slate-300">
         <div className="container flex flex-col gap-4 md:flex-row justify-between items-center px-4">
           <a href="/">
             <img alt="Logo" src={logo} className="w-16 h-16 md:w-32 md:h-20" />
@@ -61,6 +65,16 @@ const FooterPart = () => {
             </div>
           </div>
         </div>
+        <span
+          role="button"
+          onClick={scrollToTop}
+          className="absolute bottom-0 lg:left-[95%] left-[80%]"
+        >
+          <FontAwesomeIcon
+            icon={faArrowCircleUp}
+            className="h-10 lg:h-16 w-16 text-orange-500 animate-pulse"
+          />
+        </span>
       </div>
       <div className="bg-blue-800 flex justify-between p-4 text-white text-center">
         <p className="text-md lg:text-xl mb-2">
