@@ -32,7 +32,7 @@ const MotionComponent = ({ children }) => {
       controls.start({
         y: 0,
         opacity: 1,
-        transition: { duration: 1, type: "spring", stiffness: 300 },
+        transition: { duration: 2, type: "spring", stiffness: 50 },
       });
     }
   }, [isVisible, controls]);
