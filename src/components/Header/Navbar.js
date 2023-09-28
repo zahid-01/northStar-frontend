@@ -53,13 +53,13 @@ const Navbar = () => {
         <h2 className="text-green-500 ml-2 text-3xl md:text-2xl lg:text-4xl font-bold tracking-[1px]">
           NORTH STAR
         </h2>
-        <div className="hidden md:flex items-center space-x-2 text-lg md:space-x-4 lg:space-x-6">
+        <div className="hidden md:flex items-center space-x-2 text-lg md:space-x-4 underline-offset-4 lg:space-x-6">
           {isLoggedIn && (
             <>
               {userInfo.role === "ns-admin" && (
                 <NavLink
                   to="inventory"
-                  className="text-black hover:underline font-semibold"
+                  className="text-black hover:underline  font-semibold"
                 >
                   Inventory
                 </NavLink>
@@ -82,7 +82,7 @@ const Navbar = () => {
             <>
               <NavLink
                 to="login"
-                className="text-black hover:underline font-semibold"
+                className="text-black hover:underline  font-semibold"
               >
                 Login
               </NavLink>

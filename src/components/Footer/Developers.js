@@ -32,7 +32,14 @@ const DeveloperProfiles = () => {
       name: "Basit Bashir",
       position: "Frontend Developer",
       image: img2,
-      skills: ["HTML", "CSS", "JavaScript", "React"],
+      skills: [
+        "HTML",
+        "CSS",
+        "Framer Motion",
+        "TailwindCSS",
+        "JavaScript",
+        "React",
+      ],
       bio: "I'm a creative frontend developer with a strong background in HTML, CSS, and JavaScript. I love creating responsive and user-friendly web interfaces.",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/basit-bashir-6b732b204/",
