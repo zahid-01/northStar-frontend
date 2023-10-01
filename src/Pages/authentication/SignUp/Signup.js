@@ -214,7 +214,6 @@ const Signup = () => {
                 required
               />
             </div>
-
             <div className="mb-4">
               <label className="block text-md font-medium">
                 Show Password:
@@ -224,6 +223,16 @@ const Signup = () => {
                 onChange={togglePasswordVisibility}
                 className="form-checkbox h-5 w-5 text-blue-500"
               />
+
+              <p className="mt-4">
+                Already have an account?
+                <a
+                  href="\login"
+                  className="text-green-900 font-bold tracking-[1px] ml-2 hover:underline hover:cursor-pointer"
+                >
+                  Click here!
+                </a>
+              </p>
             </div>
 
             <div className="col-span-2 mx-auto w-full flex  justify-center">
