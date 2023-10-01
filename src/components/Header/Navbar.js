@@ -46,7 +46,7 @@ const Navbar = () => {
           <img
             src={logo}
             alt="Logo"
-            className="cursor-pointer w-18 h-12"
+            className="cursor-pointer w-16 lg:w-24 h-12 hidden md:block"
             onClick={() => navigate("/")}
           />
         </div>
