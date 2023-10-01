@@ -1,13 +1,13 @@
 import { URL } from "../../Assets/environment/url";
 const OrderCard = ({ orderItem }) => {
   return (
-    <div className="bg-white shadow-md rounded-lg p-4 mb-4 md:mb-0 ">
+    <div className="bg-white shadow-md rounded-lg p-4 mb-4 md:mb-0">
       <img
         src={`${URL}img/products/${orderItem.product.images[0]}`}
         alt="img"
-        className="w-full h-48 object-cover mb-2"
+        className="w-full h-56 object-contain mb-2 mx-auto"
       />
-      <p className="text-lg font-semibold mb-2">
+      <p className="text-lg font-semibold mb-2 tracking-[1px]">
         {orderItem.product.productName}
       </p>
       <p className="text-blue-500 tracking-[1px] text-xl font-semibold">

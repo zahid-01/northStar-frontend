@@ -150,7 +150,7 @@ const Navbar = () => {
                   to="cart"
                   className="text-center text-black block hover:underline font-semibold"
                 >
-                  Cart <i className="fa fa-shopping-cart ml-1"></i>
+                  Cart ({cartCount})<i className="fa fa-shopping-cart ml-1"></i>
                 </NavLink>
               </>
             )}
