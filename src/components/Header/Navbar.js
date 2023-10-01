@@ -50,7 +50,7 @@ const Navbar = () => {
             onClick={() => navigate("/")}
           />
         </div>
-        <h2 className="text-green-500 ml-2 text-3xl md:text-2xl lg:text-4xl font-bold tracking-[1px]">
+        <h2 className="text-green-900 ml-2 text-3xl md:text-2xl lg:text-4xl font-bold tracking-[1px] animate-trending bg-gradient-to-b from-blue-300 via-white to-zinc-400 p-3 rounded-full">
           NORTH STAR
         </h2>
         <div className="hidden md:flex items-center space-x-2 text-lg md:space-x-4 underline-offset-4 lg:space-x-6">
