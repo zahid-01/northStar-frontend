@@ -39,7 +39,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`backdrop-blur-md p-2 md:p-4 lg:p-6 sticky top-0 z-50 shadow-lg`}
+      className={`backdrop-blur-lg sticky top-0 z-50 p-2 md:p-4 lg:p-6  shadow-lg`}
     >
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
@@ -156,6 +156,12 @@ const Navbar = () => {
             )}
             {!isLoggedIn && (
               <>
+                <a
+                  href="/"
+                  className="text-center text-black block hover:underline text-[18px] font-bold tracking-[1px]"
+                >
+                  Home
+                </a>
                 <NavLink
                   to="login"
                   className="text-center text-black block hover:underline text-[18px] font-bold tracking-[1px]"
