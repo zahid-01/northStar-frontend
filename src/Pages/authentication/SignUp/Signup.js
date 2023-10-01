@@ -106,9 +106,9 @@ const Signup = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center  shadow-md">
+    <div className="min-h-screen flex items-center justify-center  shadow-md ">
       <MotionComponent>
-        <div className="bg-gradient-to-b from-zinc-200 to-blue-200 sm:p-8 md:p-12 lg:p-16 rounded-lg shadow-md w-full">
+        <div className="bg-zinc-300 p-8 md:p-12 lg:p-16 w-full rounded-xl">
           <p className="w-full lg:w-1/4 mx-auto text-center text-2xl font-bold text-gray-800 mb-10 p-2 rounded-xl bg-gradient-to-t from-blue-300 to-white shadow-md shadow-black uppercase">
             Sign-up 👇
           </p>
@@ -229,7 +229,7 @@ const Signup = () => {
             <div className="col-span-2 mx-auto w-full flex  justify-center">
               <button
                 type="submit"
-                className="bg-blue-500 text-white py-2 px-4 rounded-md tracking-[1px] hover:bg-blue-600 w-full lg:w-1/4 "
+                className="text-xl bg-blue-500 text-white p-4 rounded-full tracking-[2px] hover:bg-blue-600 w-full lg:w-1/4 "
                 onClick={submitHandler}
               >
                 Sign Up
