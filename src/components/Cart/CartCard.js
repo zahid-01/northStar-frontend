@@ -1,6 +1,13 @@
+import { useDispatch } from "react-redux";
 import { URL } from "../../Assets/environment/url";
+import { cartSliceActions } from "../../Store/cartSlice";
 
 const CartCard = ({ product }) => {
+  const dispatch = useDispatch();
+
+  function handleRemoveItem() {
+    dispatch(cartSliceActions.removeItems(product.item._id));
+  }
   return (
     <>
       <div className="bg-white p-4 rounded shadow">
@@ -18,7 +25,10 @@ const CartCard = ({ product }) => {
         <p className="text-center text-blue-700 font-semibold">
           Quantity: {product.count}
         </p>
-        <button className="text-white bg-red-600 px-3 py-4 rounded-2xl flex mx-auto mt-4 hover:bg-red-700">
+        <button
+          className="text-white bg-red-600 px-3 py-4 rounded-2xl flex mx-auto mt-4 hover:bg-red-700"
+          onClick={handleRemoveItem}
+        >
           remove <i className="fa fa-trash ml-2 mt-1" />
         </button>
       </div>

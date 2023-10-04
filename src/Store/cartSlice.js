@@ -15,12 +15,15 @@ const cartSlice = createSlice({
     addItems(state, actions) {
       state.cartItems = [...state.cartItems, actions.payload];
     },
+
     setCount(state, actions) {
       state.cartCount = actions.payload;
     },
-    // removeItems(state, actions){
-
-    // }
+    removeItems(state, actions) {
+      state.cartItems = state.cartItems.filter(
+        (item) => item.item._id !== actions.payload
+      );
+    },
   },
 });
 
