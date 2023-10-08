@@ -5,7 +5,7 @@ import axios from "axios";
 import { loginSliceActions } from "../../../Store/loginSlice";
 
 import { cartSliceActions } from "../../../Store/cartSlice";
-
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { URL } from "../../../Assets/environment/url";
@@ -152,12 +152,12 @@ const Login = () => {
             </div>
             <p className="text-center mt-4 text-gray-600 text-sm">
               Don't have an account?{" "}
-              <a
-                href="\signup"
+              <NavLink
+                to="/signUp"
                 className="text-red-500 tracking-[1px] hover:underline"
               >
                 Create one here
-              </a>
+              </NavLink>
             </p>
           </form>
         </div>

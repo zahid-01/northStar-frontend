@@ -7,6 +7,7 @@ import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { loginSliceActions } from "../../../Store/loginSlice";
 import MotionComponent from "../../../components/Header/Animation";
 import { URL } from "../../../Assets/environment/url";
+import { NavLink } from "react-router-dom";
 
 const Signup = () => {
   const dispatch = useDispatch();
@@ -226,12 +227,12 @@ const Signup = () => {
 
               <p className="mt-4">
                 Already have an account?
-                <a
-                  href="\login"
+                <NavLink
+                  to="/login"
                   className="text-green-900 font-bold tracking-[1px] ml-2 hover:underline hover:cursor-pointer"
                 >
                   Click here!
-                </a>
+                </NavLink>
               </p>
             </div>
 
