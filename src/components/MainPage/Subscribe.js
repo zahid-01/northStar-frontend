@@ -10,7 +10,7 @@ const NewsletterSection = () => {
   };
 
   return (
-    <section className="bg-gray-100 py-12">
+    <section className="bg-gray-100 py-12 mb-8 shadow-md">
       <div className="container mx-auto px-4">
         <div className=" max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4">

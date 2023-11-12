@@ -23,7 +23,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="bg-blue-500 p-4 sm:p-6 md:p-8 lg:p-10">
+    <div className="bg-blue-500 p-4 sm:p-6 md:p-8 lg:p-10 mb-6">
       <form className="text-white" onSubmit={handleSubmit}>
         <h2 className="text-center font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4">
           Contact Us
