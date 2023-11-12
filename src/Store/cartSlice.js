@@ -23,6 +23,7 @@ const cartSlice = createSlice({
       state.cartItems = state.cartItems.filter(
         (item) => item.item._id !== actions.payload
       );
+      state.cartCount = state.cartItems.length;
     },
   },
 });
