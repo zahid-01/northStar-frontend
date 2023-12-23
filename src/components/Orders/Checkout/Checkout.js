@@ -3,15 +3,17 @@ import axios from "axios";
 import { URL } from "../../../Assets/environment/url";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 const Checkout = () => {
   const { state: product } = useLocation();
-  const subtotal = product.productPrice;
-  const discount = 10;
-  const shipping = 100;
-  const taxPercentage = 0.18;
+  const [quantity, setQuantity] = useState(1);
+  const subtotal = product.productPrice * quantity;
+  const discount = 0.05;
+  const shipping = 70;
+  const taxPercentage = 0.09;
 
-  const calculatedDiscount = subtotal * (discount / 100);
+  const calculatedDiscount = subtotal * discount;
   const calculatedTax =
     (subtotal - calculatedDiscount + shipping) * taxPercentage;
   const calculatedTotal =
@@ -60,7 +62,11 @@ const Checkout = () => {
               </div>
               <div className="mb-2">
                 <label className="font-semibold mx-4">Quantity:</label>
-                <select className="border rounded-md px-2 py-1 w-1/2 text-center">
+                <select
+                  className="border rounded-md px-2 py-1 w-1/2 text-center"
+                  value={quantity}
+                  onChange={(e) => setQuantity(Number(e.target.value))}
+                >
                   <option value={1}>1</option>
                   <option value={2}>2</option>
                   <option value={3}>3</option>

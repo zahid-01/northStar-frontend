@@ -73,11 +73,11 @@ const Product = (props) => {
             </div>
           </div>
           <div className="flex flex-col justify-center tracking-[1px] md:w-1/2 mt-4 md:mt-0">
-            <h1 className="text-4xl font-semibold mb-4">
+            <h1 className="text-2xl md:text-4xl font-semibold mb-4">
               {product.productName}
             </h1>
             <p className="text-xl mb-4">{product.productDescription}</p>
-            <div className="flex justify-between items-center ">
+            <div className="flex flex-col space-y-6 mt-4 ">
               <p className="text-xl font-semibold">
                 &#8377; {product.productPrice}
               </p>
