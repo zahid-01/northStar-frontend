@@ -1,17 +1,21 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { URL } from "../../../Assets/environment/url";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faClose } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { useSelector } from "react-redux";
+import Modal from "react-modal";
+
+Modal.setAppElement("#root");
 
 const Checkout = () => {
   const { state: product } = useLocation();
   const [quantity, setQuantity] = useState(1);
   const subtotal = product.productPrice * quantity;
-  const discount = 0.05;
-  const shipping = 70;
-  const taxPercentage = 0.09;
+  const discount = 0;
+  const shipping = 0;
+  const taxPercentage = 0;
 
   const calculatedDiscount = subtotal * discount;
   const calculatedTax =
@@ -19,7 +23,15 @@ const Checkout = () => {
   const calculatedTotal =
     subtotal - calculatedDiscount + shipping + calculatedTax;
 
+  const isLoggedIn = useSelector((state) => state.login.isLoggedIn);
+  const navigate = useNavigate();
+  const [showLoginPopup, setShowLoginPopup] = useState(false);
+
   function checkOutHandler() {
+    if (!isLoggedIn) {
+      setShowLoginPopup(true);
+      return;
+    }
     axios({
       method: "GET",
       url: `${URL}orders/get-checkout-session/${this}`,
@@ -120,6 +132,34 @@ const Checkout = () => {
           </div>
         </div>
       </div>
+      <Modal
+        isOpen={showLoginPopup}
+        onRequestClose={() => setShowLoginPopup(false)}
+        contentLabel="Login Popup"
+        className="modal-content"
+        overlayClassName="modal-overlay fixed top-0 left-0 flex items-center justify-center w-full h-full bg-gray-800 bg-opacity-40"
+      >
+        <div className="modal-container bg-gradient-to-r from-blue-300 to-white  w-96 p-6 rounded-xl">
+          <div className="modal-header flex justify-between items-center mb-4">
+            <h2 className="text-xl font-bold">Login Required</h2>
+            <button
+              className="text-gray-700 hover:text-gray-900 cursor-pointer"
+              onClick={() => setShowLoginPopup(false)}
+            >
+              <FontAwesomeIcon icon={faClose} className="w-8 h-6" />
+            </button>
+          </div>
+          <div className="modal-body text-center mb-4 tracking-wider">
+            <p className="p-4">Please log in to proceed.</p>
+            <button
+              className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 tracking-wider"
+              onClick={() => navigate("/login")}
+            >
+              Go to Login
+            </button>
+          </div>
+        </div>
+      </Modal>
     </>
   );
 };
